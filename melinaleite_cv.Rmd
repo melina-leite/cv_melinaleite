@@ -1,0 +1,610 @@
+---
+name: Melina de Souza
+surname:  Leite
+position: "Ecologist and Data Scientist"
+profilepic: img/profile_pic.jpg
+address: "Department of Ecology, University of São Paulo, Brazil"
+www: melinaleite.weebly.com
+pronouns: she/her
+email: "melina.leite@ib.usp.br"
+twitter: melina_sleite
+github: melina-leite
+orcid: 0000-0003-0505-0667
+googlescholar: Melina de Souza Leite
+researchgate: Melina-Leite
+date: May 2024 #"`r format(Sys.time(), '%B %Y')`"
+output:
+  vitae::awesomecv:
+  page_total: true
+---
+
+```{r yaml,echo=F,include=F}
+#yaml options
+# linkedin:
+# headcolor:
+# aboutme
+```
+
+\footnotesize
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae);
+library(tibble)
+library(magrittr)
+library(here)
+library(readr)
+```
+
+# Research interests
+
+```{r INTERESTS}
+interests <- tribble(
+  ~macro, ~micro,
+  "Applied Ecology & Conservation", "Landscape ecology; Biodiversity and species conservation; Evidence-based synthesis and systematic reviews",
+  "Theoretical Ecology",  "Forest Demography; Community ecology; Macroecology",
+  "Data Science and Ecological Statistics", "Multilevel/Mixed-effects models, Variance partitioning analysis",
+  "Metascience and Open Science", "Diversity and equity in Ecology and Conservation, Best practices and tools in Open Science"
+)
+
+interests %>% 
+  detailed_entries(
+    with = macro,
+    what = micro)
+
+#FUTURO: incluir em Data Science: linear models' diagnostic -->
+```
+
+# Education
+
+```{r}
+edu <- tribble(
+  ~degree, ~startYear, ~endYear, ~inst, ~where, ~detail,
+  "University of São Paulo", "Jun 2017", "Dec 2022", "PhD in Ecology", "São Paulo, Brazil", list("Title: Embracing Variability: the use of mixed effects models in Ecology", "Outstanding Thesis Prize 2023 from the University of São Paulo", "Mar 2020 - Mar 2021: Visiting PhD student at the University of Regensburg (Germany)", "Sep 2020 - Feb 2021: Predoctoral fellowship at Smithsonian Environmental Research Center, Smithsonian Institution (USA)", "Jan 2022 - Mar 2022: Visiting PhD student at Leiden University (The Netherlands"),
+  "University of São Paulo", "Oct 2021", "Jul 2023", "MBA in Data Science and Analytics", "São Paulo, Brazil", "Title: How to get the most out of forest data? Disentangling tree demography with multilevel models",
+  "University of São Paulo", "Nov 2015", "Aug 2017", "MBA in Environmental Management", "São Paulo, Brazil", "Title: Socio-economic factors and native vegetation cover on rural properties in the state of São Paulo, Brazil",
+  "Federal University of Rio de Janeiro", "Mar 2007", "Jul 2009", "MSc in Ecology", "Rio de Janeiro, Brazil", "Title: Spatial and activity patterns of the water opossum Chironectes minimus in Atlantic Forest rivers in southeastern Brazil",
+  "Federal University of Rio de Janeiro", "Mar 2003", "Feb 2006", "BSc in Biology", "Rio de Janeiro, Brazil", "Title: Ecology and conservation of the water opossum, Chironectes minimus, in Atlantic Forest rivers in the São João River Basin, Rio de Janeiro State",
+)
+```
+
+```{r EDUCATION}
+edu %>%
+  detailed_entries(
+    with = inst,
+    what = degree,
+    why = detail,
+    where = glue::glue("{startYear} --> {endYear}",.na = ""),
+    when = where)
+```
+
+# Professional Experiences
+
+```{r}
+work <- tribble(
+  ~title, ~unit, ~startMonth, ~startYear, ~endMonth, ~endYear, ~where, ~detail,
+  "Staff Scientist in Ecology and Data Scientist", "Department of Ecology, University of São Paulo", "Aug", 2010, "Present", NA, "São Paulo, Brazil", list("Working in ecology and conservation research projects in Landscape Ecology and Conservation, Theoretical Ecology, Tropical Forest Ecology, Ecological Statistics",  "Consultant in sampling design, statistical analysis, spatial analysis (GIS) and R.","Lecturer/Collaborating lecturer/teaching assistant in bachelor's biology and graduate Ecology courses."),
+  "Postdoctoral Researcher", "Bayreuth Center of Ecology and Environmental Research (BayCEER), Bayreuth University", "Oct", 2023, "Feb", 2024, "Bayreuth, Germany", "Project: Demography of global threatened tree species. Laboratory of Ecosystem Analysis and Simulations (EASI-lab).",
+  "Visiting Researcher", "Institute of Environmental Sciences (CML), Leiden University", "Jan", 2023, "Mar", 2023, "Leiden, The Netherlands", "Project: Are There Limits to the Predictability of Forest Dynamics? Statistical framework with multilevel models and variance partitioning techniques for forest ecology.s",
+  "Environmental Consultant", "Many Companies", "Jun", 2009, "Jul", 2010, "Brazil", "Responsible for fieldwork on mammal assessment and for writing Environmental Impact Assessment reports in five Environmental License Projects in the brazilian states of Minas Gerais, Bahia, Piauí, Mato Grosso, and Goiás.",
+)
+```
+
+```{r WORK}
+work %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    why = detail,
+    where = glue::glue("{startMonth} {startYear} --> {endMonth} {endYear}",
+                       .na = ""),
+    when = where)
+```
+
+# Teaching Experiences
+
+```{r}
+teach <- tribble(
+  ~title, ~unit, ~startMonth, ~startYear, ~endMonth, ~endYear, ~where, ~detail,
+  "Best practices and Open Science tools for Ecology", "University of São Paulo", "Aug", 2023, "Aug", 2023, "São Paulo, Brazil", list("Lecturer and co-creator of the course for graduate students (master's and PhD) at the Graduate Program in Ecology.", "Block course, 1 week (30h)."),
+  
+  "Introduction to R for Environmental Consultancy", "Arcadis Consultancy", "May", 2016, "Jun", 2016, "São Paulo, Brazil", "Lecturer and creator of the course taught to the data science team at a large consultancy company in Brazil.",
+  
+    "The Atlantic Forest field course", "University of São Paulo", "Jul", 2015, "Jul", 2015, "São Paulo, Brazil", "Guest lecturer/Project reviewer at the block course for graduate students (master's and PhD) at the Graduate Program for Ecology",
+  
+  "Field course on Invertebrate Zoology and Ecology", "Federal Institute of Education (IFRJ)", NA, 2011, NA, 2012, "Rio de Janeiro, Brazil", "Guest Lecturer in two field courses for bachelor/undergraduate students.",
+  
+  "R Language for Ecological Data Analysis", "University of São Paulo", NA, 2012,"2018 & 2023", NA, "São Paulo, Brazil", "Teaching assistant in the block course, taught once per year at the Graduate Program for Ecology ",
+  
+  "Design, Planning and Data Analysis in Ecology", "University of São Paulo", NA, 2018, NA, 2018, "São Paulo, Brazil", "Block course, taught once per year at the Graduate Program for Ecology",
+  
+  "Teaching assistant at bachelor courses in Biology", "University of São Paulo", "2015 - 2017 - 2024",NA, NA, NA, "São Paulo, Brazil", list("Ecology of plant populations and communities (2017)", "Virtual Ecology (2015, 2017)", "Bioclimatology (2024)"),
+  
+  "Undergraduate teaching assistant at bachelor courses in Biology", "Federal University of Rio de Janeiro", NA, 2005, NA, 2006, "Rio de Janeiro, Brazil", list("Ecology, two semesters 2005, including fieldwork", "Animal Ecology, one semester 2006, including fieldwork", "Vertebrate Zoology, one semester 2006, including fieldwork"))
+```
+
+## Lecturer
+
+```{r LECTURER}
+teach %>% slice(1:4) %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    why = detail,
+    where = glue::glue("{startMonth} {startYear} --> {endMonth} {endYear}",
+                       .na = ""),
+    when = where)
+```
+
+## Teaching assistant
+
+```{r TEACHING ASSISTANT}
+teach %>% slice(5:8)  %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    why = detail,
+    where = glue::glue("{startMonth} {startYear} --> {endMonth} {endYear}",
+                       .na = ""),
+    when = where)
+```
+
+# Awards, fellowships and grants
+
+The Brazilian reais (R$) amounts were converted to US dollars at the time of the award.
+
+```{r}
+award <- tribble(
+  ~title, ~unit, ~startMonth, ~startYear, ~endMonth, ~endYear, ~detail, ~value,
+  "Outstanding Thesis Prize 2023", "University of São Paulo","Dec", 2023, "Dec", 2023, "Prize awarded to the best PhD thesis defended at the University of São Paulo in 2022, in the category of staff scientist.", "$10,000 BRL (˜$2,000 USD)",
+  "Research Fellowship", "PrInt-USP and CAPES, Brazil", "Jan", 2023, "Mar", 2023, "Two months fellowship from the Internationalization Program of the University of São Paulo and CAPES (Coordenação de Aperfeiçoamento de Pessoal de Nível Superior) to conduct research at Leiden University, The Netherlands.", "$5,030 EUR",
+  "Research Grant", "CAPES and Gratuate Program in Ecology, University of São Paulo", "Jan", 2022, "Mar", 2022, "Grant to develop part of the PhD project at Leiden University, The Netherlands.", "$10,000 BRL (˜$2,000 USD)",
+  "Language Course Scholarship", "DAAD, Germany", "Jan", 2022, "Feb", 2022, "Scholarship from DAAD (Deutscher Akademischer Austauchdienst) to attend the Hochschulwinterkurs, an online German course (B2 level) at Leipzig University, Germany. It includes the course fee (€ 1185,00) and general expenses ($675 EUR).", "$1,860 EUR",
+  "MBA Scholarship", "University of São Paulo, Brazil", "Oct", 2021, "Jul", 2023, "Scholarship to cover all course fees of the MBA in Data Science and Analytics at the University of São Paulo.", "$12,420 BRL (˜$2,600 USD)", # dolar em 2021 ~4,8
+  "Predoctoral Fellowship", "Smithsonian Institution, USA", "Sep", 2020, "Feb", 2021, "6-months fellowship to work at the Laboratory of Quantitative Ecology, Smithsonian Environmental Research Center, Edgewaters (USA).", "$18,080 USD",
+  "Research Travel Grant", "ForestGEO, Smithsonian Institution, USA", "Mar", 2020, "May", 2020, "Travel grant to develop the PhD project with the ForestGEO network at the University of Regensburg, Germany, for 2 months.","$2,500 USD",
+  "Research Grant", "FAPESP, Brazil", NA, 2017, NA, 2020, "Researcher collaborator at the 2-years research funding. Title: Functional and Phylogenetic assembly of trees in Restinga forest. PI: A.A. de Oliveira (University of São Paulo).","$60,000 USD",
+  "MBA Scholarship", "University of São Paulo, Brazil", "Nov", 2015, "Aug", 2017, "Scholarship to cover all course fees of the MBA in Environmental Management at the University of São Paulo.", "$16,200 BRL (˜$4,700 USD)", # dolar em 2016 ~3,4
+  "Research Grant", "FAPESP, Brazil", NA, 2014, NA, 2016, "Researcher collaborator at the 2-years research funding. Title: Ecological Detective tools, using imperfect detection models to investigate ecological questions. PI: P.I. Prado (University of São Paulo).","$60,000 USD",
+  "Master's Scholarship", "CNPq, Brazil", "Mar", 2007, "Mar", 2009, "2-years fellowship from Brazilian National Council for Scientific Development (CNPq) to work on my master's project.","$33,600 (˜$13,440 USD)", # dolar em 2008: ~2,5
+  "Undergraduate Scientific Scholarship", "CNPq, Brazil", "Mar", 2005, "Feb", 2007, "2-years fellowship from Brazilian National Council for Scientific Development (CNPq) to work on my bachelor's science project.","$9,600 BRL (˜$4,800 USD)", # dolar em 2007: ~2
+)
+```
+
+```{r}
+award %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    why = detail,
+    when = glue::glue("{startMonth} {startYear} --> {endMonth} {endYear}",.na = ""),
+    where= value)
+```
+
+## Shortlisting
+
+```{r}
+shortlist <- tribble(
+  ~title, ~unit, ~year, ~detail,
+  "Southwood Prize 2022: Early Career Researcher Award", "Journal of Applied Ecology", "2023", "Shortlisted among the 12 best papers in Journal of Applied Ecology in 2022 with the paper: Matrix quality determines the strength of habitat loss filtering on bird communities at the landscape scale. "
+)
+#https://appliedecologistsblog.com/2023/03/20/southwood-prize-2022-shortlist-announced-for-early-career-researcher-award/
+```
+
+```{r}
+shortlist %>%
+  detailed_entries(with = title, 
+                   what = unit,
+                   why = detail,
+                   where = year)
+```
+
+# Publications
+
+15 peer-reviewed publications (6 as first author, 1 as senior author); 4 manuscripts in preparation (2 as first/senior author); 3 Preprints; 5 repositories for datasets and code; 2 book chapters; 3 pieces of science outreach (2 reports for magazines, 1 for newspaper); 8 pieces of media coverage.
+
+**Google Scholar Citations (May 2024): 424; H-index 10; i10-index 10.**
+
+*Citations for each paper are according to Google Scholar. Links to publications on titles.
+
+## Peer-Reviewed articles
+
+```{r PEER-REVIEWED, eval=F}
+bibliography_entries("references/peer_reviewed.bib") %>%
+  arrange(desc(issued))
+```
+
+1.  **Leite, M. de S.**, McMahon, S. M., Prado, P. I., Davies, S. J., Oliveira, A. A. de, ..., Visser, M.D & Hülsmann, L. (2024). [Major Axes of Variation in Tree Demography across Global Forests](https://doi.org/10.1111/ecog.07187). *Ecography*, e07187.
+
+2.  Hülsmann, L., Chisholm, R. A., Comita, L., Visser, M. D., **Leite, M. de S.**, ... Hartig, F. (2024). [Latitudinal Patterns in Stabilizing Density Dependence of Forest Communities](https://doi.org/10.1038/s41586-024-07118-4). *Nature*, 1–8. Citations: 3.
+
+3.  **Leite, M. de S.**, Boesing, A. L., Metzger, J. P., & Prado, P. I. (2022). [Matrix Quality Determines the Strength of Habitat Loss Filter‐ ing on Bird Communities at the Landscape Scale](https://doi.org/10.1111/). *Journal of Applied Ecology*, 59(11), 2790–2802. Citations: 11. 
+
+4.  Oberpriller, J., **Leite, M. de S.**, & Pichler, M. (2022). [Fixed or Random? On the Reliability of Mixed‐Effects Models for a Small Number of Levels in Grouping Variables](https://doi.org/10.1002/ece3.9062). *Ecology and Evolution*, 12(7), e9062. Citations: 45.
+
+5.  Barros, C. dos S. de, Pistón, N., Delciellos, A. C., & **Leite, M. de S.** (2021). [Is Oecologia Australis Promoting Gender Equality in Its Review Process?](https://doi.org/10.4257/oeco.2021.2503.01) *Oecologia Australis*, 25(3), 642–647. Citations: 2.
+
+6.  Locosselli, G. M., Brienen, R. J. W., **Leite, M. de S.**, Gloor, M., Krottenthaler, S., Oliveira, A. A. de, Barichivich, J., Anhuf, D., Ceccantini, G., Schöngart, J., & Buckeridge, M. (2020). [Global Tree‐Ring Analysis Reveals Rapid Decrease in Tropical Tree Longevity with Temperature.](https://doi.org/10.1073/pnas.2003873117) *Proceedings of the National Academy of Sciences*, 117(52), 33358–33364. Citations: 72.
+
+7.  **Leite, M. de S.**, Silva Junior, J. A. D., Calaboni, A., Igari, A. T., Leite, M. D. S., Silva Junior, J. A. D., Calaboni, A., & Igari, A. T. (2020). [Socioeconomic factors and natvie vegetation cover in rural landscapes in São Paulo state, Brazil](https://doi.org/10.1590/1809-4422asoc20170309r3vu2020l1ao). *Ambiente & Sociedade*, 23.  Citations: 7.
+
+8.  Lira, P. K., **Leite, M. de S.**, & Metzger, J. P. (2019). [Temporal Lag in Ecological Responses to Landscape Change: Where Are We Now?](https://doi.org/10.1007/s40823-019-00040-w) *Current Landscape Ecology Reports*, 4(3), 70–82. Citations: 59.
+
+9.  Acosta, A. L., d’Albertas, F., **Leite, M. de S.**, Saraiva, A. M., & Walter Metzger, J. P. (2018). [Gaps and Limitations in the Use of Restoration Scenarios: A Review](https://doi.org/10.1111/rec.12882). R*estoration Ecology*, 26(6), 1108–1119. Citations: 24.
+
+10. **Leite, M. de S.**, Galliez, M., Queiroz, T. L., & Fernandez, F. A. S. (2016). [Spatial Ecology of the Water Opossum Chironectes Minimus in Atlantic Forest Streams](https://doi.org/10.1016/j.mambio.2016.05). *Mammalian Biology*, 003. Citations: 9.
+
+11. Fernandez, F. A. S., Galliez, M., **Leite, M. de S.**, Queiroz, T. L., & Palmeirim, A. F. (2015). [Natural History of the Water Opossum Chironectes Minimus: A Review](https://doi.org/10.4257/oeco.2015.1901.04). *Oecologia Australis*, 19(1), 47–62. Citations: 17.
+
+12. Palmeirim, A. F., **Leite, M. de S.**, Santos‐Reis, M., & Fernandez, F. A. S. (2014). [Habitat Selection for Resting Sites by the Water Opossum (Chironectes Minimus) in the Brazilian Atlantic Forest](https://doi.org/10.1080/01650521.2014.966627). *Studies on Neotropical Fauna and Environment*, 49(3), 231–238. Citations: 10.
+
+13. **Leite, M. de S.**, Queir oz, T. L., Galliez, M., de Mendonça, P. P., & Fernandez, F. a. S. (2013). [Activity Patterns of the Water Opossum Chironectes Minimus in Atlantic Forest Rivers of South‐Eastern Brazil](https://doi.org/10.1017/S0266467413000187). *Journal of Tropical Ecology*, 29(03), 261–264. Citations: 16.
+
+14. **Leite, M. de S.**, Tambosi, L. R., Romitelli, I., & Metzger, J. P. (2013). [Landscape Ecology Perspective in Restoration Projects for Biodiversity Conservation : A Review](https://doi.org/10.4322/natcon.2013.019). *Perspectives in Ecology & Conservation (Natureza & Conservação)*, 11(2), 108–118. Citations: 90.
+
+15. Galliez, M., **Leite, M. de S.**, Queiroz, T. L., & Fernandez, F. A. S. (2009). [Ecology of the Water Opossum Chironectes Minimus in Atlantic Forest Streams of Southeastern Brazil](https://doi.org/10.1644/07-MAMM-A-397.1). *Journal of Mammalogy*, 90(1), 93–103. Citations: 58.
+
+## Manuscripts in preparation
+
+Manuscripts are available upon request.
+
+```{r IN_PREP, eval=F}
+bibliography_entries("references/in_prep.bib") 
+```
+
+1.  Barreto, J., Romitelli, I., Santana, P. C., Assis, A. P., Pardini, R., & **Leite, M. de S.**. Is the Audience Gender‐Blind? A Smaller Audience in Female Talks Highlights Prestige Differences in Academia. *To Be Submitted for Recomendation to Peer Community In Ecology.* \*Authors with Equal Contribution.
+
+2.  Barreto, J. R., **Leite, M. de S.**, Pardini, R., & Nichols, E. Context‐Dependent Drivers of Biodiversity Response to Anthropogenic Changes. *To Be Submitted to Ecology.*
+
+3.  **Leite, M. de S.**, De Deurwaerder, H., Hülsmann, L., & Visser, M. D. Are There Limits to the Predictability of Forest Dynamics? *To Be Submitted to Biogeosciences.*
+
+4.  Morato, K., **Leite, M. de S.**, ..., Metzger, J. P. Unpacking the Effects of Urban Green Areas Exposure on Mental Health: A Meta‐Analysis. *To Be Submitted to Landscape and Urban Planning.*
+
+## Preprints
+
+All Preprints already published in peer-reviewed journals (see above).
+
+```{r PREPRINT, eval=F}
+bibliography_entries("references/preprints.bib") %>%
+  arrange(desc(issued))
+```
+
+1.  **Leite, M. de S.**, McMahon, S. M., Prado, P. I., Davies, S. J., Oliveira, A. A. de, ..., Visser, M.D. & Hulsmann, L. (2023). [Major Axes of Variation in Tree Demography across Global Forests](https:%20//doi.org/10.1101/2023.01.11.523538). bioRxiv.
+
+2.  **Leite, M. de S.**, Boesing, A. L., Metzger, J. P., & Prado, P. I. (2021). [Matrix Quality Determines the Strength of Habitat Loss Filtering on Bird Communities at the Landscape Scale](https://doi.org/10.32942/osf.io/bhec5). EcoEvoRxiv.
+
+3.  Oberpriller, J., **Leite, M. de S.**, & Pichler, M. (2021). [Fixed or Random? On the Reliability of Mixed‐Effects Models for a Small Number of Levels in Grouping Variables](https://doi.org/10.1101/2021.05.03.442487). bioRxiv.
+
+## Book chapters
+
+```{r BOOK_CHAPTERS, eval=F}
+bibliography_entries("references/book_chapters.bib") %>%
+  arrange(desc(issued))
+```
+
+1.  **Leite, M. de S.**, Silva Junior, J. A. D., Calaboni, A., & Igari, A. T. (2021). [Variações no percentual de vegetação nativa em imóveis de povos indígenas, quilombolas e comunidades locais tradicionais no Estado de São Paulo](http://portal.sbpcnet.org.br/livro/povostradicionais5.pdf). In M. C. da Cunha, S. B. Magalhães, & C. Adams (Eds.), Povos Tradicionais e Biodiversidade no Brasil: Vols. Parte II Seção 5: Os territórios indígenas e tradicionais protegem a biodiversidade? (p. 134).
+
+2.  Calaboni, A., **Leite, M. de S.**, Campanha, J. S., Oliveira, C. E. de, Resende, R. U., Pavanelli, J. M. M., Tambosi, L. R., & Igari, A. T. (2020). [ODS 15 – Vida Terrestre – Histórico, Governança e Perspectivas Para Conservação Dos Ecossistemas Terrestres Na Macrometrópole Paulista](https://editora.ufabc.edu.br/ciencias-sociais/72-objetivos-do-desenvolvimento-sustentavel). In K. Frey, P. H. C. Torres, P. R. Jacobi, & R. C. F. Ramos (Eds.), Objetivos Do Desenvolvimento Sustentável: Desafios Para o Planejamento e a Governança Ambiental Na Macrometrópole Paulista (pp. 235–261). Editora UFABC.  Citations: 2.
+
+## Data/Code repositories
+
+```{r DATA_CODE_REPO, eval=F}
+bibliography_entries("references/data_code_repo.bib") %>%
+  arrange(desc(issued))
+```
+
+1.  **Leite, M. de S.** (2023). [Data and Code from: Major Axes of Variation in Tree Demography across Global Forests](https:%20//doi.org/10.5281/zenodo.10046360). Zenodo.
+
+2.  **Leite, M. de S.** (2022). [Data and Code from: Matrix Quality Determines the Strength of Habitat Loss Filtering on Bird Communities at the Landscape Scale (v2.2)](https://doi.org/10.5281/zenodo.6989648). Zenodo.
+
+3.  Pichler, M., **Leite, M. de S.** & Oberpriller, J. (2022). [Data and Code from: Fixed or Random? On the Reliability of Mixed‐Effects Models for a Small Number of Levels in Grouping Variables](https://doi.org/10.5281/ZENODO.5817298). Zenodo.
+
+4.  **Leite, M. de S.** (2016). D[ata from: Spatial Ecology of the Water Opossum Chironectes Minimus in Atlantic Forest Streams](https://doi.org/10.5441/001/1.4rr97k10). Movebank Repository.
+
+## Science outreach
+
+```{r OUTREACH, eval=F}
+bibliography_entries("references/outreach.bib") %>%
+  arrange(desc(issued))
+```
+
+1.  Galliez, M., **Leite, M. de S.**, Fernandez, F. A. S., Queiroz, T. L., Palmeirim, A. F., Avelato, H. L., & Mendonça, P. P. (2011). Cuída d’água *Chironectes Minimus*. MG BIOTA,4(3), 56–60.2.
+
+2.  **Leite, M. de S.**, Galliez, M., Queiroz, T. L., & Fernandez, F. A. S. (2010). Cuíca D‘água. In Ficha Dos Seres Volume 3 ‑ Reserva Biológica União.
+
+3.  Fernandez, F. A. dos S., Galliez, M. & **Leite, M. de S.**. (2007). [O Gambá Que Inventou o Submarino](https://melinaleite.weebly.com/uploads/8/0/5/9/80595270/o_gamb%C3%A1_que_inventou_o_submarino_2007_fernandez_et_al.pdf). Ciência Hoje, 39(234): 70–72.
+
+4.  Fernandez, FAS; Galliez M & **Leite, M. de S.**. 2007. [O gambá que inventou o submarino](https://melinaleite.weebly.com/uploads/8/0/5/9/80595270/chichi_reportagem_jornal_do_brasil.pdf). [Jornal do Brasil, JB Ciência Hoje (edição 0309)](https://memoria.bn.gov.br/DocReader/DocReader.aspx?bib=030015_12&pagfis=209524), p. A32, 11 Feb. 2007. 
+
+## Media Coverage
+
+```{r MEDIA_COV, eval=F}
+bibliography_entries("references/media_cov.bib") %>%
+  arrange(desc(issued))
+```
+
+1.  Custódio, J. (2024). [Árvores têm mais dificuldade de sobreviver perto de outras da mesma espécie](https://jornal.usp.br/ciencias/arvores‐tem‐mais‐dificuldade‐de‐sobreviver‐perto‐de‐outras‐da‐mesma‐especie/). In Jornal da USP.
+
+2.  Bigas, B. (2023). [Pró‐Reitoria de Pós‐Graduação divulga vencedores do Prêmio Tese Destaque USP](https://jornal.usp.br/institucional/pro‐reitoria‐de‐pos‐graduacao‐divulga‐vencedores‐do‐premio‐tese‐destaque‐usp/). In Jornal da USP.
+
+3.  Journal of Applied Ecology (2023). [Southwood Prize 2022: Shortlist Announced for Early Career Researcher Award](https://appliedecologistsblog.com/2023/03/20/southwood-prize-2022-shortlist-announced-for-early-career-researcher-award/). In The Applied Ecologist.
+
+4.  SORTEE. (2021). [SORTEE Member Voices: Melina de Souza Leite](https://www.sortee.org/blog/2021/08/16/2021_sortee_member_m). In SORTEE.
+
+5.  ForestGEO. (2021). [ForestGEO Celebrates International Women & Girls in Science Day 2021](https://forestgeo.si.edu/blog/forestgeo-celebrates-international-women-girls-science-day-2021). In ForestGEO.
+
+6.  Paiva, V. (2021). [Árvores Passaram a Ter Uma Vida Mais Curta e Isso é Preocupante, Segundo Cientistas](https://www.hypeness.com.br/2021/01/arvores‐passaram‐a‐ter‐uma‐vida‐mais‐curta‐e‐isso‐e‐preocupante‐segundo‐cientistas/). In Hypeness.
+
+7.  Geraque, E. (2020). [Árvores tropicais crescem mais rápido, mas duram pouco mais da metade do tempo de vida das temperadas](https://revistapesquisa.fapesp.br/arvores-tropicais-crescem-mais-rapido-mas-duram-pouco-mais-da-metade-do-tempo-de-vida-das-temperadas/). In Pesquisa FAPESP.
+
+8. Podcast Diálogos Socioambientais. (2020). [ODS15 ‑ Falando de Vida Terrestre com Adriane, Leandro e Alexandre](https://open.spotify.com/episode/0n9MfK9cuEGD67G1tteo4D?si=oJ5Vh8-UTk-Wb93HMEei9A&nd=1&dlsi=efc6ff525c444e5e). Episódio de Podcast/Entrevista sobre o Capítulo 15 do livro _Objetivos Do Desenvolvimento Sustentável: Desafios Para o Planejamento e a Governança Ambiental Na Macrometrópole Paulista_. Available in Spotify.
+
+9.  Grandelle, R. (2010). Ribeirinho Tímido: Estudo Revela Hábitos de Espécie Pouco Conhecida. O Globo, 2–3.
+
+# Talks
+
+```{r}
+inv.talk <- tribble(
+  ~title, ~unit, ~year, ~where,
+  "On the Demography of Threatened Trees", "Plant Ecology seminar at BayCEER", 2023, "University of Bayreuth, Germany",
+  "Open Data in Ecology", "Lecture at the Graduate course on Open Science", 2023, "University of Goiás, Brazil",
+  "Fixed or random? On the reliability of mixed-effects models for a small number of levels in grouping variables", "Lecture at the Graduate course on Mixed-Effects Models", 2022, "University of São Paulo, Brazil",
+    "Open Data: what is it and what's in it for me?", "EcoEncontros seminar at the Department of Ecology", 2022 , "University of São Paulo, Brazil",
+    "Major axes of variation in tree demography across global forests", "EcoEncontros seminar at the Department of Ecology", 2022, "University of São Paulo, Brazil",
+    "Effects of matrix quality on the (dis)assembly of bird communities in fragmented landscapes", "EcoEncontros seminar at the Department of Ecology", 2019, "University of São Paulo, Brazil",
+  "Mixed models in Ecology: using GLMMs to separate processes that assemble biological communities", "Lecture at the Graduate course on Mixed-Effects Models", 2018, "University of São Paulo, Brazil",
+)
+
+sel.talk <- tribble(
+  ~title, ~unit, ~year, ~where,
+  "Organizing global forests: Disentangling the contributions of species, space, and time to tree demography", "INTECOL Conference", 2022, "Geneva, Switzerland",
+  "The dominant role of taxonomy in global forests: Disentangling the major contributions to tree demography", "ForestGEO seminar", 2021, "Online",
+  "Seeing the forest for the trees: Disentangling the contribution of species, space and time to the variability in tree vital rates", "Festival of Ecology conference", 2020, "Online",
+  "Matrix quality modulates habitat loss filtering across scales on bird assemblages in fragmented landscapes", "Laboratory of Theoretical Ecology", 2020, " University of Regensburg, Germany",
+  "Applications of Mixed-Effects models in Ecology", "Laboratory of Landscape Ecology and Conservation", 2017, "University of São Paulo, Brazil",
+)
+## DESCOBRIR COMO COLOCAR LINK PARA VÍDEOS GRAVADOS NO YOUTUBE!! (LINKS NO ARQUIVO GDOCS)
+```
+
+## Invited talks
+
+```{r}
+inv.talk %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    when = where,
+    where= year)
+```
+
+## Selected talks
+
+```{r}
+sel.talk %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    when = where,
+    where= year)
+```
+
+# Other Professional Experiences
+
+## Jury member
+
+```{r}
+jury <- tribble(
+  ~title, ~unit, ~year, ~where,
+  "1 PhD Defense", "Graduate Program of Ecology", 2023, "University of São Paulo, Brazil")
+
+jury %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    when = where,
+    where= year)
+```
+
+## Student's committee member
+
+```{r}
+committee1 <- tribble(
+  ~title, ~unit, ~year, ~where,
+  "1 MSc dissertation", "Graduate Program of Ecology", "2022 - 2024", "University of São Paulo, Brazil",
+  "2 MSc dissertations", "Graduate Program of Ecology", "2023 - 2025", "University of São Paulo, Brazil"
+)
+
+committee1 %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    when = where,
+    where= year)
+```
+
+## Editorial
+
+```{r}
+editor <- tribble(
+  ~title, ~unit, ~year,
+  "EcoEvoRxiv PrePrint Server", "Preprint Moderator", "2024 - Present", 
+  "Oecologia Australis", "Assistant Editor in Statistics", "2020 - Present")
+
+editor %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    where= year)
+```
+
+## Committee work
+
+```{r}
+committee2 <- tribble(
+  ~title, ~unit, ~year, ~where,
+  "Staff representative", "Committee of Permanent Affirmative Actions of the Graduate Program of Ecology", "2024", "University of São Paulo, Brazil",
+  "Staff representative", "Council of the Department of Ecology", "2022 - 2024", "University of São Paulo, Brazil",
+  "Staff representative", "Committee of Culture and Outreach of the Institute of Biosciences", "2015", "University of São Paulo, Brazil")
+
+committee2 %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    when = where,
+    where= year)
+```
+
+## Reviewer of scientific papers
+
+Referee of 11 manuscripts for 7 peer-reviewed journals, including **Journal of Biogeography** (2; 2021,2022); **Biota Neotropical** (1; 2020); **Oecologia Australis** (3; 2014,2019,2021); **Studies of Neotropical Fauna and Environment** (1; 2018); **Mammalia** (1; 2010); **Biotemas** (2; 2010)
+
+```{r, eval=F}
+review <- tribble(
+    ~title, ~unit, ~year,
+    "Journal of Biogeography", "2 reviews", "2021-2022", 
+    "Biota Neotropical", "1 review", "2020",
+    "Oecologia Australis", "3 reviews", "2014,2019,2021",
+    "Studies of Neotropical Fauna and Environment", "1 review", "2018",
+    "Mammalia", "1 review", "2014",
+    "Biotemas", "2 reviews", "2010")
+review %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    where= year)
+```
+
+## Others
+
+```{r}
+organiza <- tribble(
+  ~title, ~unit, ~year, ~where,
+  "International Workshop on MetaEcology", "Organizational work", "2016", "University of São Paulo, Ilhabela, Brazil"
+)
+organiza %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    where= year,
+    when= where)
+```
+
+```{r}
+others <- tribble(
+  ~title, ~detail, ~year, ~where,
+  "Volunteering", "Volunteer in a pedagogical activity at a preparatory course for people covered by the Graduate Program in Ecology (USP) affirmative action policy (https://ecocurso.wixsite.com/ecocurso/)", "2022", "Online, University of São Paulo")
+
+others %>%
+  detailed_entries(
+    with = title,
+    what  = detail,
+    where= year,
+    when = where)
+```
+
+# Affilliation in Scientific Organizations
+
+```{r}
+affi <- tribble(
+  ~title, ~unit, ~year,
+  "ABECO", "Brazilian Association for Ecological Science and Conservation", "2020-2024",
+  "SBPC", "Brazilian Society for the Advancement of Science","2020-2024",
+  "BES", "British Ecological Society","2020-2022",
+  "SORTEE", "Society for Open, Reliable, and Transparent Ecology and Evolutionary Biology","2021-2024")
+
+affi %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    where= year)
+```
+
+# Language skills
+
+```{r LANG}
+lang <- tribble(
+  ~lang, ~level, ~detail,
+  "Portuguese", "Native speaker", "",
+  "English", "Advanced/C1", "TOEFL ITP total score (2022): 647 of 677",
+  "Spanish", "Intermediate/B2", "",
+  "German", "Intermediate/B2", "B2 course certificate from Leipzig University")
+
+lang %>%
+  detailed_entries(
+    with = lang,
+    what = detail,
+    where= level)
+```
+
+# Computational skills
+
+```{r}
+comp <- tribble(
+  ~frequency, ~programs,
+  "Daily", "R, Rmarkdown/Quarto, Git, GitHub, bash on MacOS/Linux servers for High-Performance Computing",
+  "Often", "QGIS, ArCGIS",
+  "Seldom", "Python, HTML, CSS, Latex")
+
+comp %>% 
+  detailed_entries(
+    with = frequency,
+    what = programs)
+```
+
+# Specialized training
+
+## Schools, Workshops and Field courses
+
+```{r schools}
+schools <- tribble(
+    ~title, ~unit, ~year, ~where, ~detail,
+    "IX Southern-Summer School on Mathematical Biology", "ICTP-SAIRF (40h)", "2020", "São Paulo, Brazil", "",
+    "School on Community Ecology: from principle to patterns", "ICTP-SAIRF (40h)", "2020", "São Paulo, Brazil", "",
+    "Smithsonian CTFS-ForestGEO Analytical Workshop", "Singapore National University (2 weeks, 104h)", "2019", "Singapore","Travel costs were covered by the Smithsonian Institution",
+    "Field Course: Ecology of the Pantanal", "Federal University of Mato Grosso do Sul (1 month)", "2008", "Mato Grosso do Sul, Brazil", "",
+    "Filed Course: Ecology of the Amazon Forest", "Institute of Amazonian Research (INPA) (1 month)", "2007", "Amazonas, Brazil", "")
+
+schools %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    when = where,
+    where= year)
+```
+
+## Other courses (graduate level)
+
+```{r}
+courses <- tribble(
+  ~title, ~unit, ~year, ~where,
+  "Machine learning and AI in TensorFlow and R", "University of Regensburg (40h)", "2020", "Regensburg, Germany",
+  "Model-based multivariate analysis of abundance data using R", "PR Statistics (40h)", "2018", "Glasgow, Scotland",
+  "Generalized linear models", "Institute of Mathematics and Statistics, USP (120h)", "2018", "São Paulo, Brazil",
+  "Multivariate analysis", "Institute of Mathematics and Statistics, USP (120h)", "2018", "São Paulo, Brazil",
+  "Time Series Analysis", "Institute of Mathematics and Statistics, USP (60h)", "2017", "São Paulo, Brazil",
+  "English for oral presentation", "University of São Paulo (30h)", "2017", "São Paulo, Brazil",
+  "Workshop MCMC step-by-step", "Institute of Biosciences, USP (30h)", "2017", "São Paulo, Brazil",
+  "Mixed-Effects Models and Applications", "Institute of Mathematics and Statistics, USP (120h)", "2016", "São Paulo, Brazil",
+  "Multivariate Analysis for Environmental Science", "Institute of Biosciences, USP (40h)", "2016", "São Paulo, Brazil",
+  "Introduction to Exploratory Analysis and Statistical Methods", "Institute of Biosciences, USP (40h)", "2016", "São Paulo, Brazil",
+  "Coaching and Leadership", "University of São Paulo (40h)", "2015", "São Paulo, Brazil",
+  "Software Carpentry Workshop for Python, Git and Github", "University of São Paulo (16h)", "2015", "São Paulo, Brazil",
+  "Academic Writing", "Institute of Biosciences, USP (40h)", "2014", "São Paulo, Brazil",
+  "Bayesian Models in Ecology", "Institute of Biosciences, USP (40h)", "2014", "São Paulo, Brazil",
+  "Statistical Models in Population Ecology", "Institute of Biosciences, USP (40h)", "2014", "São Paulo, Brazil",
+  "Statistical Modeling for Ecology", "Institute of Biosciences, USP (40h)", "2014", "São Paulo, Brazil",
+  "R Language for Ecological Data Analysis", "Institute of Biosciences, USP (40h)", "2011", "São Paulo, Brazil",
+  "English for Academic Writing", "Institute of Biosciences, USP (40h)", "2011", "São Paulo, Brazil",
+  "GIS for Conservation Biology", "Institute for Ecological Research (IPE) (30h)", "2009", "São Paulo, Brazil",
+  "Design and Analysis of Ecological Experiments", "Fluminense Federal University (40h)", "2008", "Rio de Janeiro, Brazil",
+)
+```
+
+```{r courses}
+courses %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    when = where,
+    where= year)
+```
