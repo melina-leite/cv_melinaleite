@@ -492,7 +492,7 @@ organiza %>%
 ```{r}
 others <- tribble(
   ~title, ~detail, ~year, ~where,
-  "Volunteering", "Volunteer in a pedagogical activity at a preparatory course for people covered by the Graduate Program in Ecology (USP) affirmative action policy (https://ecocurso.wixsite.com/ecocurso/)", "2022", "Online, University of São Paulo")
+  "Volunteering", "Volunteer in a pedagogical activity at a preparatory course for students applying for the Graduate Program in Ecology (USP) through affirmative action policy", "2022", "Online, University of São Paulo")
 
 others %>%
   detailed_entries(
