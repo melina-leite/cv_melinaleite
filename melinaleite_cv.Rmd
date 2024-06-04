@@ -151,11 +151,16 @@ teach %>% slice(5:8)  %>%
 
 # Awards, fellowships and grants
 
+<!-- REVISAR VALORES DO GRANT DA PAULA LIRA
+     AVALIAR SEPARAR SEÇÃO PRIZES, AWARDS, FELLOWSHIPS DE GRANTS
+     -->
 The Brazilian reais (R$) amounts were converted to US dollars at the time of the award.
 
 ```{r}
 award <- tribble(
   ~title, ~unit, ~startMonth, ~startYear, ~endMonth, ~endYear, ~detail, ~value,
+  "Research Grant", "PPBIO-MMA, Brazil", "May", 2024, "April", 2027, "Researcher/collaborator at the 3‑years research funding. Title: Reconnecting people with nature: a path to conserving the Atlantic Forest
+. PI: Paula Koeler Lira (Pontifícia Universidade Católica, Rio de Janeiro).", "$300,000 BRL (~$57,000 USD)",
   "Outstanding Thesis Prize 2023", "University of São Paulo","Dec", 2023, "Dec", 2023, "Prize awarded to the best PhD thesis defended at the University of São Paulo in 2022, in the category of staff scientist.", "$10,000 BRL (˜$2,000 USD)",
   "Research Fellowship", "PrInt-USP and CAPES, Brazil", "Jan", 2023, "Mar", 2023, "Two months fellowship from the Internationalization Program of the University of São Paulo and CAPES (Coordenação de Aperfeiçoamento de Pessoal de Nível Superior) to conduct research at Leiden University, The Netherlands.", "$5,030 EUR",
   "Research Grant", "CAPES and Gratuate Program in Ecology, University of São Paulo", "Jan", 2022, "Mar", 2022, "Grant to develop part of the PhD project at Leiden University, The Netherlands.", "$10,000 BRL (˜$2,000 USD)",
@@ -252,28 +257,29 @@ Manuscripts are available upon request.
 bibliography_entries("references/in_prep.bib") 
 ```
 
-1.  Barreto, J., Romitelli, I., Santana, P. C., Assis, A. P., Pardini, R., & **Leite, M. de S.**. Is the Audience Gender‐Blind? A Smaller Audience in Female Talks Highlights Prestige Differences in Academia. *To Be Submitted for Recomendation to Peer Community In Ecology.* \*Authors with Equal Contribution.
+1.  Barreto, J. R., **Leite, M. de S.**, Pardini, R., & Nichols, E. Context‐Dependent Drivers of Biodiversity Response to Anthropogenic Changes. *To Be Submitted to Ecology.*
 
-2.  Barreto, J. R., **Leite, M. de S.**, Pardini, R., & Nichols, E. Context‐Dependent Drivers of Biodiversity Response to Anthropogenic Changes. *To Be Submitted to Ecology.*
+2.  **Leite, M. de S.**, De Deurwaerder, H., Hülsmann, L., & Visser, M. D. Are There Limits to the Predictability of Forest Dynamics? *To Be Submitted to Biogeosciences.*
 
-3.  **Leite, M. de S.**, De Deurwaerder, H., Hülsmann, L., & Visser, M. D. Are There Limits to the Predictability of Forest Dynamics? *To Be Submitted to Biogeosciences.*
-
-4.  Morato, K., **Leite, M. de S.**, ..., Metzger, J. P. Unpacking the Effects of Urban Green Areas Exposure on Mental Health: A Meta‐Analysis. *To Be Submitted to Landscape and Urban Planning.*
+3.  Morato, K., **Leite, M. de S.**, ..., Metzger, J. P. Unpacking the Effects of Urban Green Areas Exposure on Mental Health: A Meta‐Analysis. *To Be Submitted to Landscape and Urban Planning.*
 
 ## Preprints
 
-All Preprints already published in peer-reviewed journals (see above).
 
 ```{r PREPRINT, eval=F}
 bibliography_entries("references/preprints.bib") %>%
   arrange(desc(issued))
 ```
 
-1.  **Leite, M. de S.**, McMahon, S. M., Prado, P. I., Davies, S. J., Oliveira, A. A. de, ..., Visser, M.D. & Hulsmann, L. (2023). [Major Axes of Variation in Tree Demography across Global Forests](https:%20//doi.org/10.1101/2023.01.11.523538). bioRxiv.
+1.  \*Barreto, J., Romitelli, I., Santana, P. C., Assis, A. P., Pardini, R., & \***Leite, M. de S.**. [Is the Audience Gender‐Blind? Smaller Audience in Female Talks Highlights Prestige Differences in Academia](https://doi.org/10.32942/X25607). EcoEvoRxiv. *Submitted for Recomendation to Peer Community In Ecology.* \*Authors with Equal Contribution.
 
-2.  **Leite, M. de S.**, Boesing, A. L., Metzger, J. P., & Prado, P. I. (2021). [Matrix Quality Determines the Strength of Habitat Loss Filtering on Bird Communities at the Landscape Scale](https://doi.org/10.32942/osf.io/bhec5). EcoEvoRxiv.
+Preprints published in peer-reviewed journals:
 
-3.  Oberpriller, J., **Leite, M. de S.**, & Pichler, M. (2021). [Fixed or Random? On the Reliability of Mixed‐Effects Models for a Small Number of Levels in Grouping Variables](https://doi.org/10.1101/2021.05.03.442487). bioRxiv.
+2.  **Leite, M. de S.**, McMahon, S. M., Prado, P. I., Davies, S. J., Oliveira, A. A. de, ..., Visser, M.D. & Hulsmann, L. (2023). [Major Axes of Variation in Tree Demography across Global Forests](https:%20//doi.org/10.1101/2023.01.11.523538). bioRxiv.
+
+3.  **Leite, M. de S.**, Boesing, A. L., Metzger, J. P., & Prado, P. I. (2021). [Matrix Quality Determines the Strength of Habitat Loss Filtering on Bird Communities at the Landscape Scale](https://doi.org/10.32942/osf.io/bhec5). EcoEvoRxiv.
+
+4.  Oberpriller, J., **Leite, M. de S.**, & Pichler, M. (2021). [Fixed or Random? On the Reliability of Mixed‐Effects Models for a Small Number of Levels in Grouping Variables](https://doi.org/10.1101/2021.05.03.442487). bioRxiv.
 
 ## Book chapters
 
@@ -293,13 +299,17 @@ bibliography_entries("references/data_code_repo.bib") %>%
   arrange(desc(issued))
 ```
 
-1.  **Leite, M. de S.** (2023). [Data and Code from: Major Axes of Variation in Tree Demography across Global Forests](https:%20//doi.org/10.5281/zenodo.10046360). Zenodo.
+1. **Leite, M. de S.** & Barreto, J. (2024). [Data and Code from: Is the audience gender-blind? Smaller audience in female talks highlights prestige differences in academia (v0.9.9)](https://doi.org/10.5281/zenodo.11288110). Zenodo.
 
-2.  **Leite, M. de S.** (2022). [Data and Code from: Matrix Quality Determines the Strength of Habitat Loss Filtering on Bird Communities at the Landscape Scale (v2.2)](https://doi.org/10.5281/zenodo.6989648). Zenodo.
+2.  **Leite, M. de S.** (2022). [Data and Code from: Major Axes of Variation in Tree Demography across Global Forests](https:%20//doi.org/10.5281/zenodo.10046360). Zenodo.
 
-3.  Pichler, M., **Leite, M. de S.** & Oberpriller, J. (2022). [Data and Code from: Fixed or Random? On the Reliability of Mixed‐Effects Models for a Small Number of Levels in Grouping Variables](https://doi.org/10.5281/ZENODO.5817298). Zenodo.
+3.  **Leite, M. de S.** (2022). [Data and Code from: Matrix Quality Determines the Strength of Habitat Loss Filtering on Bird Communities at the Landscape Scale (v2.2)](https://doi.org/10.5281/zenodo.6989648). Zenodo.
 
-4.  **Leite, M. de S.** (2016). D[ata from: Spatial Ecology of the Water Opossum Chironectes Minimus in Atlantic Forest Streams](https://doi.org/10.5441/001/1.4rr97k10). Movebank Repository.
+4.  Pichler, M., **Leite, M. de S.** & Oberpriller, J. (2022). [Data and Code from: Fixed or Random? On the Reliability of Mixed‐Effects Models for a Small Number of Levels in Grouping Variables](https://doi.org/10.5281/ZENODO.5817298). Zenodo.
+
+5. Locosselli, G., Brienen, R., **Leite, M. de Souza**, et al. (2020). [Locoselli_et_al_2020_Global tree-ring analysis reveals rapid decrease in tropical tree longevity with temperature_PNAS](https://doi.org/10.6084/m9.figshare.13119842.v1). figshare repository. 
+
+6.  **Leite, M. de S.** (2016). [Data from: Spatial Ecology of the Water Opossum Chironectes Minimus in Atlantic Forest Streams](https://doi.org/10.5441/001/1.4rr97k10). Movebank Repository.
 
 ## Science outreach
 
