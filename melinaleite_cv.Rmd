@@ -206,9 +206,9 @@ shortlist %>%
 
 # Publications
 
-15 peer-reviewed publications (6 as first author, 1 as senior author); 4 manuscripts in preparation (2 as first/senior author); 3 Preprints; 5 repositories for datasets and code; 2 book chapters; 3 pieces of science outreach (2 reports for magazines, 1 for newspaper); 8 pieces of media coverage.
+15 peer-reviewed publications (6 as first author, 1 as senior author); 4 manuscripts in preparation (2 as first/senior author); 5 Preprints; 5 repositories for datasets and code; 2 book chapters; 3 pieces of science outreach (2 reports for magazines, 1 for newspaper); 8 pieces of media coverage.
 
-**Google Scholar Citations (May 2024): 424; H-index 10; i10-index 10.**
+**Google Scholar Citations (June 2024): 440; H-index 10; i10-index 11.**
 
 *Citations for each paper are according to Google Scholar. Links to publications on titles.
 
@@ -219,7 +219,7 @@ bibliography_entries("references/peer_reviewed.bib") %>%
   arrange(desc(issued))
 ```
 
-1.  **Leite, M. de S.**, McMahon, S. M., Prado, P. I., Davies, S. J., Oliveira, A. A. de, ..., Visser, M.D & Hülsmann, L. (2024). [Major Axes of Variation in Tree Demography across Global Forests](https://doi.org/10.1111/ecog.07187). *Ecography*, e07187.
+1.  **Leite, M. de S.**, McMahon, S. M., Prado, P. I., Davies, S. J., Oliveira, A. A. de, ..., Visser, M.D & Hülsmann, L. (2024). [Major Axes of Variation in Tree Demography across Global Forests](https://doi.org/10.1111/ecog.07187). *Ecography*, e07187. **EDITOR'S CHOICE of the June Issue.**
 
 2.  Hülsmann, L., Chisholm, R. A., Comita, L., Visser, M. D., **Leite, M. de S.**, ... Hartig, F. (2024). [Latitudinal Patterns in Stabilizing Density Dependence of Forest Communities](https://doi.org/10.1038/s41586-024-07118-4). *Nature*, 1–8. Citations: 3.
 
@@ -273,13 +273,15 @@ bibliography_entries("references/preprints.bib") %>%
 
 1.  \*Barreto, J., Romitelli, I., Santana, P. C., Assis, A. P., Pardini, R., & \***Leite, M. de S.**. [Is the Audience Gender‐Blind? Smaller Audience in Female Talks Highlights Prestige Differences in Academia](https://doi.org/10.32942/X25607). EcoEvoRxiv. *Submitted for Recomendation to Peer Community In Ecology.* \*Authors with Equal Contribution.
 
+2. Noble, D. W. A., Xirocostas, Z. A., Wu, N. C., Martinig, A. R., Lagisz, M.,(...) Leite, MS,(...) et al. 2024. [The promise of community-driven preprints in ecology and evolution](https://ecoevorxiv.org/repository/view/7239/). EcoEvoRxiv. Submitted to PLOS Computational Biology.
+
 Preprints published in peer-reviewed journals:
 
-2.  **Leite, M. de S.**, McMahon, S. M., Prado, P. I., Davies, S. J., Oliveira, A. A. de, ..., Visser, M.D. & Hulsmann, L. (2023). [Major Axes of Variation in Tree Demography across Global Forests](https:%20//doi.org/10.1101/2023.01.11.523538). bioRxiv.
+3.  **Leite, M. de S.**, McMahon, S. M., Prado, P. I., Davies, S. J., Oliveira, A. A. de, ..., Visser, M.D. & Hulsmann, L. (2023). [Major Axes of Variation in Tree Demography across Global Forests](https:%20//doi.org/10.1101/2023.01.11.523538). bioRxiv.
 
-3.  **Leite, M. de S.**, Boesing, A. L., Metzger, J. P., & Prado, P. I. (2021). [Matrix Quality Determines the Strength of Habitat Loss Filtering on Bird Communities at the Landscape Scale](https://doi.org/10.32942/osf.io/bhec5). EcoEvoRxiv.
+4.  **Leite, M. de S.**, Boesing, A. L., Metzger, J. P., & Prado, P. I. (2021). [Matrix Quality Determines the Strength of Habitat Loss Filtering on Bird Communities at the Landscape Scale](https://doi.org/10.32942/osf.io/bhec5). EcoEvoRxiv.
 
-4.  Oberpriller, J., **Leite, M. de S.**, & Pichler, M. (2021). [Fixed or Random? On the Reliability of Mixed‐Effects Models for a Small Number of Levels in Grouping Variables](https://doi.org/10.1101/2021.05.03.442487). bioRxiv.
+5.  Oberpriller, J., **Leite, M. de S.**, & Pichler, M. (2021). [Fixed or Random? On the Reliability of Mixed‐Effects Models for a Small Number of Levels in Grouping Variables](https://doi.org/10.1101/2021.05.03.442487). bioRxiv.
 
 ## Book chapters
 
