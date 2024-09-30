@@ -3,16 +3,16 @@ name: Melina de Souza
 surname:  Leite
 position: "Ecologist and Data Scientist"
 profilepic: img/profile_pic.jpg
-address: "Department of Ecology, University of São Paulo, Brazil"
+address: "Theoretical Ecology Lab, University of Regensburg, Germany"
 www: melinaleite.weebly.com
 pronouns: she/her
-email: "melina.leite@ib.usp.br"
+email: "melina.souza-leite@ur.de"
 twitter: melina_sleite
 github: melina-leite
 orcid: 0000-0003-0505-0667
 googlescholar: Melina de Souza Leite
 researchgate: Melina-Leite
-date: May 2024 #"`r format(Sys.time(), '%B %Y')`"
+date: September 2024 #"`r format(Sys.time(), '%B %Y')`"
 output:
   vitae::awesomecv:
   page_total: true
@@ -43,7 +43,7 @@ interests <- tribble(
   ~macro, ~micro,
   "Applied Ecology & Conservation", "Landscape ecology; Biodiversity and species conservation; Evidence-based synthesis and systematic reviews",
   "Theoretical Ecology",  "Forest Demography; Community ecology; Macroecology",
-  "Data Science and Ecological Statistics", "Multilevel/Mixed-effects models, Variance partitioning analysis",
+  "Data Science and Ecological Statistics", "Multilevel/Mixed-effects models, Variance partitioning analysis, Models' diagnostic",
   "Metascience and Open Science", "Diversity and equity in Ecology and Conservation, Best practices and tools in Open Science"
 )
 
@@ -51,8 +51,6 @@ interests %>%
   detailed_entries(
     with = macro,
     what = micro)
-
-#FUTURO: incluir em Data Science: linear models' diagnostic -->
 ```
 
 # Education
@@ -83,7 +81,9 @@ edu %>%
 ```{r}
 work <- tribble(
   ~title, ~unit, ~startMonth, ~startYear, ~endMonth, ~endYear, ~where, ~detail,
-  "Staff Scientist in Ecology and Data Scientist", "Department of Ecology, University of São Paulo", "Aug", 2010, "Present", NA, "São Paulo, Brazil", list("Working in ecology and conservation research projects in Landscape Ecology and Conservation, Theoretical Ecology, Tropical Forest Ecology, Ecological Statistics",  "Consultant in sampling design, statistical analysis, spatial analysis (GIS) and R.","Lecturer/Collaborating lecturer/teaching assistant in bachelor's biology and graduate Ecology courses."),
+  "Postdoctoreal Researcher", "Theoretical Ecology Lab, University of Regensburg, Germany", "Sep", 2024, "Present", NA,
+  "Regensburg, Gemany","Project: Increasing the validity of statistical analyses with DHARMa",
+  "Staff Scientist in Ecology and Data Scientist", "Department of Ecology, University of São Paulo", "Aug", 2010, "August", 2024, "São Paulo, Brazil", list("Working in ecology and conservation research projects in Landscape Ecology and Conservation, Theoretical Ecology, Tropical Forest Ecology, Ecological Statistics",  "Consultant in sampling design, statistical analysis, spatial analysis (GIS) and R.","Lecturer/Collaborating lecturer/teaching assistant in bachelor's biology and graduate Ecology courses."),
   "Postdoctoral Researcher", "Bayreuth Center of Ecology and Environmental Research (BayCEER), Bayreuth University", "Oct", 2023, "Feb", 2024, "Bayreuth, Germany", "Project: Demography of global threatened tree species. Laboratory of Ecosystem Analysis and Simulations (EASI-lab).",
   "Visiting Researcher", "Institute of Environmental Sciences (CML), Leiden University", "Jan", 2023, "Mar", 2023, "Leiden, The Netherlands", "Project: Are There Limits to the Predictability of Forest Dynamics? Statistical framework with multilevel models and variance partitioning techniques for forest ecology.s",
   "Environmental Consultant", "Many Companies", "Jun", 2009, "Jul", 2010, "Brazil", "Responsible for fieldwork on mammal assessment and for writing Environmental Impact Assessment reports in five Environmental License Projects in the brazilian states of Minas Gerais, Bahia, Piauí, Mato Grosso, and Goiás.",
@@ -106,6 +106,8 @@ work %>%
 ```{r}
 teach <- tribble(
   ~title, ~unit, ~startMonth, ~startYear, ~endMonth, ~endYear, ~where, ~detail,
+    "Best practices and Open Science tools for Ecology", "University of São Paulo", "Jul", 2024, "Jul", 2024, "São Paulo, Brazil", list("Lecturer and co-creator of the course for graduate students (master's and PhD) at the Graduate Program in Ecology.", "Block course, 2 week (45h)."),
+  
   "Best practices and Open Science tools for Ecology", "University of São Paulo", "Aug", 2023, "Aug", 2023, "São Paulo, Brazil", list("Lecturer and co-creator of the course for graduate students (master's and PhD) at the Graduate Program in Ecology.", "Block course, 1 week (30h)."),
   
   "Introduction to R for Environmental Consultancy", "Arcadis Consultancy", "May", 2016, "Jun", 2016, "São Paulo, Brazil", "Lecturer and creator of the course taught to the data science team at a large consultancy company in Brazil.",
@@ -120,13 +122,19 @@ teach <- tribble(
   
   "Teaching assistant at bachelor courses in Biology", "University of São Paulo", "2015 - 2017 - 2024",NA, NA, NA, "São Paulo, Brazil", list("Ecology of plant populations and communities (2017)", "Virtual Ecology (2015, 2017)", "Bioclimatology (2024)"),
   
-  "Undergraduate teaching assistant at bachelor courses in Biology", "Federal University of Rio de Janeiro", NA, 2005, NA, 2006, "Rio de Janeiro, Brazil", list("Ecology, two semesters 2005, including fieldwork", "Animal Ecology, one semester 2006, including fieldwork", "Vertebrate Zoology, one semester 2006, including fieldwork"))
+  "Undergraduate teaching assistant at bachelor courses in Biology", "Federal University of Rio de Janeiro", NA, 2005, NA, 2006, "Rio de Janeiro, Brazil", list("Ecology, two semesters 2005, including fieldwork", "Animal Ecology, one semester 2006, including fieldwork", "Vertebrate Zoology, one semester 2006, including fieldwork"),
+
+   "Worshop on scientific graphics interpretation", "University of São Paulo", "Jul", 2024, "Jul", 2024, "São Paulo, Brazil",
+  list("Workshop dedicated to bachelor students applying for a master's/PhD at the Graduate Program in Ecology.", "Bachelor students that were covered by the Diversity and Inclusion affirmative action of the Program.", "3h")
+  )
+
+
 ```
 
 ## Lecturer
 
 ```{r LECTURER}
-teach %>% slice(1:4) %>%
+teach %>% slice(1:5) %>%
   detailed_entries(
     with = title,
     what = unit,
@@ -139,7 +147,7 @@ teach %>% slice(1:4) %>%
 ## Teaching assistant
 
 ```{r TEACHING ASSISTANT}
-teach %>% slice(5:8)  %>%
+teach %>% slice(6:9)  %>%
   detailed_entries(
     with = title,
     what = unit,
@@ -148,6 +156,20 @@ teach %>% slice(5:8)  %>%
                        .na = ""),
     when = where)
 ```
+
+## Workshops
+
+```{r}
+teach %>% slice(10)  %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    why = detail,
+    where = glue::glue("{startMonth} {startYear} --> {endMonth} {endYear}",
+                       .na = ""),
+    when = where)
+```
+
 
 # Awards, fellowships and grants
 
@@ -206,9 +228,9 @@ shortlist %>%
 
 # Publications
 
-15 peer-reviewed publications (6 as first author, 1 as senior author); 4 manuscripts in preparation (2 as first/senior author); 5 Preprints; 5 repositories for datasets and code; 2 book chapters; 3 pieces of science outreach (2 reports for magazines, 1 for newspaper); 8 pieces of media coverage.
+15 peer-reviewed publications (6 as first author, 1 as senior author); 3 manuscripts in preparation (1 as first author); 6 Preprints; 5 repositories for datasets and code; 2 book chapters; 3 pieces of science outreach (2 reports for magazines, 1 for newspaper); 9 pieces of media coverage.
 
-**Google Scholar Citations (June 2024): 440; H-index 10; i10-index 11.**
+**Google Scholar Citations (June 2024): 468; H-index 10; i10-index 10.**
 
 *Citations for each paper are according to Google Scholar. Links to publications on titles.
 
@@ -221,11 +243,11 @@ bibliography_entries("references/peer_reviewed.bib") %>%
 
 1.  **Leite, M. de S.**, McMahon, S. M., Prado, P. I., Davies, S. J., Oliveira, A. A. de, ..., Visser, M.D & Hülsmann, L. (2024). [Major Axes of Variation in Tree Demography across Global Forests](https://doi.org/10.1111/ecog.07187). *Ecography*, e07187. **EDITOR'S CHOICE of the June Issue.**
 
-2.  Hülsmann, L., Chisholm, R. A., Comita, L., Visser, M. D., **Leite, M. de S.**, ... Hartig, F. (2024). [Latitudinal Patterns in Stabilizing Density Dependence of Forest Communities](https://doi.org/10.1038/s41586-024-07118-4). *Nature*, 1–8. Citations: 3.
+2.  Hülsmann, L., Chisholm, R. A., Comita, L., Visser, M. D., **Leite, M. de S.**, ... Hartig, F. (2024). [Latitudinal Patterns in Stabilizing Density Dependence of Forest Communities](https://doi.org/10.1038/s41586-024-07118-4). *Nature*, 1–8. Citations: 9.
 
-3.  **Leite, M. de S.**, Boesing, A. L., Metzger, J. P., & Prado, P. I. (2022). [Matrix Quality Determines the Strength of Habitat Loss Filter‐ ing on Bird Communities at the Landscape Scale](https://doi.org/10.1111/). *Journal of Applied Ecology*, 59(11), 2790–2802. Citations: 11. 
+3.  **Leite, M. de S.**, Boesing, A. L., Metzger, J. P., & Prado, P. I. (2022). [Matrix Quality Determines the Strength of Habitat Loss Filter‐ ing on Bird Communities at the Landscape Scale](https://doi.org/10.1111/). *Journal of Applied Ecology*, 59(11), 2790–2802. Citations: 17. 
 
-4.  Oberpriller, J., **Leite, M. de S.**, & Pichler, M. (2022). [Fixed or Random? On the Reliability of Mixed‐Effects Models for a Small Number of Levels in Grouping Variables](https://doi.org/10.1002/ece3.9062). *Ecology and Evolution*, 12(7), e9062. Citations: 45.
+4.  Oberpriller, J., **Leite, M. de S.**, & Pichler, M. (2022). [Fixed or Random? On the Reliability of Mixed‐Effects Models for a Small Number of Levels in Grouping Variables](https://doi.org/10.1002/ece3.9062). *Ecology and Evolution*, 12(7), e9062. Citations: 41. **Prize for 2022-2023 Top cited and Top Downloaded Paper of Ecology & Evolution**
 
 5.  Barros, C. dos S. de, Pistón, N., Delciellos, A. C., & **Leite, M. de S.** (2021). [Is Oecologia Australis Promoting Gender Equality in Its Review Process?](https://doi.org/10.4257/oeco.2021.2503.01) *Oecologia Australis*, 25(3), 642–647. Citations: 2.
 
@@ -261,7 +283,7 @@ bibliography_entries("references/in_prep.bib")
 
 2.  **Leite, M. de S.**, De Deurwaerder, H., Hülsmann, L., & Visser, M. D. Are There Limits to the Predictability of Forest Dynamics? *To Be Submitted to Biogeosciences.*
 
-3.  Morato, K., **Leite, M. de S.**, ..., Metzger, J. P. Unpacking the Effects of Urban Green Areas Exposure on Mental Health: A Meta‐Analysis. *To Be Submitted to Landscape and Urban Planning.*
+3.  Morato, K., **Leite, M. de S.**, ..., Metzger, J. P. Unpacking the Effects of Urban Green Areas Exposure on Mental Health: A Meta‐Analysis. *Submitted to Landscape and Urban Planning.*
 
 ## Preprints
 
@@ -271,17 +293,19 @@ bibliography_entries("references/preprints.bib") %>%
   arrange(desc(issued))
 ```
 
-1.  \*Barreto, J., Romitelli, I., Santana, P. C., Assis, A. P., Pardini, R., & \***Leite, M. de S.**. [Is the Audience Gender‐Blind? Smaller Audience in Female Talks Highlights Prestige Differences in Academia](https://doi.org/10.32942/X25607). EcoEvoRxiv. *Submitted for Recomendation to Peer Community In Ecology.* \*Authors with Equal Contribution.
+1. Nakamura, G., Stabile, B. H., Frateles, L. F., Araujo, M. L., Neuhaus E., Marinho M., \***Leite, M. de S.**, Richter A., Liuyong, D., Freitas, T. M. S., Soares, B. E., Graça, W. J., Diniz-Filho, J. A. F. 2024 [The macroecology of knowledge: Spatio-temporal patterns of name-bearing types in biodiversity science](https://ecoevorxiv.org/repository/view/7539/). EcoEvoRxiv. *Submitted to Science*.
 
-2. Noble, D. W. A., Xirocostas, Z. A., Wu, N. C., Martinig, A. R., Lagisz, M.,(...) Leite, MS,(...) et al. 2024. [The promise of community-driven preprints in ecology and evolution](https://ecoevorxiv.org/repository/view/7239/). EcoEvoRxiv. Submitted to PLOS Computational Biology.
+2.  \*Barreto, J., Romitelli, I., Santana, P. C., Assis, A. P., Pardini, R., & \***Leite, M. de S.**. [Is the Audience Gender‐Blind? Smaller Audience in Female Talks Highlights Prestige Differences in Academia](https://doi.org/10.32942/X25607). EcoEvoRxiv. *Submitted for Recomendation to Peer Community In Ecology.* \*Authors with Equal Contribution.
+
+3. Noble, D. W. A., Xirocostas, Z. A., Wu, N. C., Martinig, A. R., Lagisz, M.,(...) Leite, MS,(...) et al. 2024. [The promise of community-driven preprints in ecology and evolution](https://ecoevorxiv.org/repository/view/7239/). EcoEvoRxiv. Submitted to Proc. Royal Soc. B.
 
 Preprints published in peer-reviewed journals:
 
-3.  **Leite, M. de S.**, McMahon, S. M., Prado, P. I., Davies, S. J., Oliveira, A. A. de, ..., Visser, M.D. & Hulsmann, L. (2023). [Major Axes of Variation in Tree Demography across Global Forests](https:%20//doi.org/10.1101/2023.01.11.523538). bioRxiv.
+4.  **Leite, M. de S.**, McMahon, S. M., Prado, P. I., Davies, S. J., Oliveira, A. A. de, ..., Visser, M.D. & Hulsmann, L. (2023). [Major Axes of Variation in Tree Demography across Global Forests](https:%20//doi.org/10.1101/2023.01.11.523538). bioRxiv.
 
-4.  **Leite, M. de S.**, Boesing, A. L., Metzger, J. P., & Prado, P. I. (2021). [Matrix Quality Determines the Strength of Habitat Loss Filtering on Bird Communities at the Landscape Scale](https://doi.org/10.32942/osf.io/bhec5). EcoEvoRxiv.
+5.  **Leite, M. de S.**, Boesing, A. L., Metzger, J. P., & Prado, P. I. (2021). [Matrix Quality Determines the Strength of Habitat Loss Filtering on Bird Communities at the Landscape Scale](https://doi.org/10.32942/osf.io/bhec5). EcoEvoRxiv.
 
-5.  Oberpriller, J., **Leite, M. de S.**, & Pichler, M. (2021). [Fixed or Random? On the Reliability of Mixed‐Effects Models for a Small Number of Levels in Grouping Variables](https://doi.org/10.1101/2021.05.03.442487). bioRxiv.
+6.  Oberpriller, J., **Leite, M. de S.**, & Pichler, M. (2021). [Fixed or Random? On the Reliability of Mixed‐Effects Models for a Small Number of Levels in Grouping Variables](https://doi.org/10.1101/2021.05.03.442487). bioRxiv.
 
 ## Book chapters
 
