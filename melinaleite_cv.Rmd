@@ -382,6 +382,7 @@ bibliography_entries("references/media_cov.bib") %>%
 ```{r}
 inv.talk <- tribble(
   ~title, ~unit, ~year, ~where,
+  "Open Data: what is it and what's in it for me?", "Lecture at the course on Data Management in Environmental Quality", 2024, "Federal University of Fronteira Sul, Brazil",
   "On the Demography of Threatened Trees", "Plant Ecology seminar at BayCEER", 2023, "University of Bayreuth, Germany",
   "Open Data in Ecology", "Lecture at the Graduate course on Open Science", 2023, "University of Goiás, Brazil",
   "Fixed or random? On the reliability of mixed-effects models for a small number of levels in grouping variables", "Lecture at the Graduate course on Mixed-Effects Models", 2022, "University of São Paulo, Brazil",
