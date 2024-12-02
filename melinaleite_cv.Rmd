@@ -43,8 +43,8 @@ interests <- tribble(
   ~macro, ~micro,
   "Applied Ecology & Conservation", "Landscape ecology; Biodiversity and species conservation; Evidence-based synthesis and systematic reviews",
   "Theoretical Ecology",  "Forest Demography; Community ecology; Macroecology",
-  "Data Science and Ecological Statistics", "Multilevel/Mixed-effects models, Variance partitioning analysis, Models' diagnostic",
-  "Metascience and Open Science", "Diversity and equity in Ecology and Conservation, Best practices and tools in Open Science"
+  "Data Science & Ecological Statistics", "Multilevel/Mixed-effects models, Variance partitioning analysis, Models' diagnostic",
+  "Metascience & Open Science", "Diversity and equity in Ecology and Conservation, Best practices and tools in Open Science"
 )
 
 interests %>% 
@@ -58,7 +58,7 @@ interests %>%
 ```{r}
 edu <- tribble(
   ~degree, ~startYear, ~endYear, ~inst, ~where, ~detail,
-  "University of São Paulo", "Jun 2017", "Dec 2022", "PhD in Ecology", "São Paulo, Brazil", list("Title: Embracing Variability: the use of mixed effects models in Ecology", "Outstanding Thesis Prize 2023 from the University of São Paulo", "Mar 2020 - Mar 2021: Visiting PhD student at the University of Regensburg (Germany)", "Sep 2020 - Feb 2021: Predoctoral fellowship at Smithsonian Environmental Research Center, Smithsonian Institution (USA)", "Jan 2022 - Mar 2022: Visiting PhD student at Leiden University (The Netherlands"),
+  "University of São Paulo", "Jun 2017", "Dec 2022", "PhD in Ecology", "São Paulo, Brazil", list("Title: Embracing Variability: the use of mixed effects models in Ecology", "Outstanding Thesis Prize 2023 from the University of São Paulo", "Mar 2020 - Mar 2021: Visiting PhD student at the University of Regensburg (Germany)", "Sep 2020 - Feb 2021: Predoctoral fellowship at Smithsonian Environmental Research Center, Smithsonian Institution (USA)", "Jan 2022 - Mar 2022: Visiting PhD student at Leiden University (The Netherlands)"),
   "University of São Paulo", "Oct 2021", "Jul 2023", "MBA in Data Science and Analytics", "São Paulo, Brazil", "Title: How to get the most out of forest data? Disentangling tree demography with multilevel models",
   "University of São Paulo", "Nov 2015", "Aug 2017", "MBA in Environmental Management", "São Paulo, Brazil", "Title: Socio-economic factors and native vegetation cover on rural properties in the state of São Paulo, Brazil",
   "Federal University of Rio de Janeiro", "Mar 2007", "Jul 2009", "MSc in Ecology", "Rio de Janeiro, Brazil", "Title: Spatial and activity patterns of the water opossum Chironectes minimus in Atlantic Forest rivers in southeastern Brazil",
@@ -81,11 +81,11 @@ edu %>%
 ```{r}
 work <- tribble(
   ~title, ~unit, ~startMonth, ~startYear, ~endMonth, ~endYear, ~where, ~detail,
-  "Postdoctoreal Researcher", "Theoretical Ecology Lab, University of Regensburg, Germany", "Sep", 2024, "Present", NA,
+  "Postdoctoral Researcher", "Theoretical Ecology Lab, University of Regensburg, Germany", "Sep", 2024, "Present", NA,
   "Regensburg, Gemany","Project: Increasing the validity of statistical analyses with DHARMa",
-  "Staff Scientist in Ecology and Data Scientist", "Department of Ecology, University of São Paulo", "Aug", 2010, "August", 2024, "São Paulo, Brazil", list("Working in ecology and conservation research projects in Landscape Ecology and Conservation, Theoretical Ecology, Tropical Forest Ecology, Ecological Statistics",  "Consultant in sampling design, statistical analysis, spatial analysis (GIS) and R.","Lecturer/Collaborating lecturer/teaching assistant in bachelor's biology and graduate Ecology courses."),
-  "Postdoctoral Researcher", "Bayreuth Center of Ecology and Environmental Research (BayCEER), Bayreuth University", "Oct", 2023, "Feb", 2024, "Bayreuth, Germany", "Project: Demography of global threatened tree species. Laboratory of Ecosystem Analysis and Simulations (EASI-lab).",
-  "Visiting Researcher", "Institute of Environmental Sciences (CML), Leiden University", "Jan", 2023, "Mar", 2023, "Leiden, The Netherlands", "Project: Are There Limits to the Predictability of Forest Dynamics? Statistical framework with multilevel models and variance partitioning techniques for forest ecology.s",
+  "Staff Scientist in Ecology and Data Science", "Department of Ecology, University of São Paulo", "Aug", 2010, "August", 2024, "São Paulo, Brazil", list("Working in ecology and conservation research projects in Landscape Ecology and Conservation, Theoretical Ecology, Tropical Forest Ecology, Ecological Statistics",  "Consultant in sampling design, statistical analysis, spatial analysis (GIS) and R language.","Lecturer/Collaborating lecturer/teaching assistant in bachelor's biology and graduate Ecology courses."),
+  "Postdoctoral Researcher", "Bayreuth Center of Ecology and Environmental Research (BayCEER), Bayreuth University", "Oct", 2023, "Feb", 2024, "Bayreuth, Germany", list("Project: Demography of global threatened tree species.", "Laboratory of Ecosystem Analysis and Simulations (EASI-lab)."),
+  "Visiting Researcher", "Institute of Environmental Sciences (CML), Leiden University", "Jan", 2023, "Mar", 2023, "Leiden, The Netherlands", "Project: Are There Limits to the Predictability of Forest Dynamics?",
   "Environmental Consultant", "Many Companies", "Jun", 2009, "Jul", 2010, "Brazil", "Responsible for fieldwork on mammal assessment and for writing Environmental Impact Assessment reports in five Environmental License Projects in the brazilian states of Minas Gerais, Bahia, Piauí, Mato Grosso, and Goiás.",
 )
 ```
@@ -382,6 +382,7 @@ bibliography_entries("references/media_cov.bib") %>%
 ```{r}
 inv.talk <- tribble(
   ~title, ~unit, ~year, ~where,
+  "Diagnostic of linear models", "Lecture at the course on Ecological Modeling and Statistics", 2024, "university of São Paulo, Brazil",
   "Open Data: what is it and what's in it for me?", "Lecture at the course on Data Management in Environmental Quality", 2024, "Federal University of Fronteira Sul, Brazil",
   "On the Demography of Threatened Trees", "Plant Ecology seminar at BayCEER", 2023, "University of Bayreuth, Germany",
   "Open Data in Ecology", "Lecture at the Graduate course on Open Science", 2023, "University of Goiás, Brazil",
@@ -491,13 +492,16 @@ committee2 %>%
     where= year)
 ```
 
-## Reviewer of scientific papers
+## Reviewer
 
-Referee of 11 manuscripts for 7 peer-reviewed journals, including **Journal of Biogeography** (2; 2021,2022); **Biota Neotropical** (1; 2020); **Oecologia Australis** (3; 2014,2019,2021); **Studies of Neotropical Fauna and Environment** (1; 2018); **Mammalia** (1; 2010); **Biotemas** (2; 2010)
+Referee of 12 manuscripts for 7 peer-reviewed journals, including **Journal of Animal Ecology** (1; 2024),  **Journal of Biogeography** (2; 2021,2022); **Biota Neotropical** (1; 2020); **Oecologia Australis** (3; 2014,2019,2021); **Studies of Neotropical Fauna and Environment** (1; 2018); **Mammalia** (1; 2010); **Biotemas** (2; 2010).
+
+Referee of 1 funding project for the **Czech Science Foundation** (2024).
 
 ```{r, eval=F}
 review <- tribble(
     ~title, ~unit, ~year,
+    "Journal of Animal Ecology", "1 review", "2024",
     "Journal of Biogeography", "2 reviews", "2021-2022", 
     "Biota Neotropical", "1 review", "2020",
     "Oecologia Australis", "3 reviews", "2014,2019,2021",
@@ -595,6 +599,9 @@ comp %>%
 ```{r schools}
 schools <- tribble(
     ~title, ~unit, ~year, ~where, ~detail,
+    "Workshop: How to plan and write a competitive research grant proposal", "University of Regensburg (6h)", "2024", "Regensburg, Germany", "",
+    "Workshop: Leadership Skills - What Does It Take to be a Young Leader?", "University of Regensburg (6h)", "2024", "Regensburg, Germany", "",
+    "Workshop: Ace your Mental Health in Science", "University of Regensburg (6h)", "2024", "Regensburg, Germany", "",
     "IX Southern-Summer School on Mathematical Biology", "ICTP-SAIRF (40h)", "2020", "São Paulo, Brazil", "",
     "School on Community Ecology: from principle to patterns", "ICTP-SAIRF (40h)", "2020", "São Paulo, Brazil", "",
     "Smithsonian CTFS-ForestGEO Analytical Workshop", "Singapore National University (2 weeks, 104h)", "2019", "Singapore","Travel costs were covered by the Smithsonian Institution",
