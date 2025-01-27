@@ -12,7 +12,7 @@ github: melina-leite
 orcid: 0000-0003-0505-0667
 googlescholar: Melina de Souza Leite
 researchgate: Melina-Leite
-date: September 2024 #"`r format(Sys.time(), '%B %Y')`"
+date: January 2025 #"`r format(Sys.time(), '%B %Y')`"
 output:
   vitae::awesomecv:
   page_total: true
@@ -105,30 +105,22 @@ work %>%
 
 ```{r}
 teach <- tribble(
-  ~title, ~unit, ~startMonth, ~startYear, ~endMonth, ~endYear, ~where, ~detail,
-    "Best practices and Open Science tools for Ecology", "University of São Paulo", "Jul", 2024, "Jul", 2024, "São Paulo, Brazil", list("Lecturer and co-creator of the course for graduate students (master's and PhD) at the Graduate Program in Ecology.", "Block course, 2 week (45h)."),
+  ~title, ~unit, ~year, ~where, ~detail,
+    "Best practices and Open Science tools for Ecology", "University of São Paulo", "2023 & 2024", "São Paulo, Brazil", list("Lecturer and co-creator of the course for graduate students (master's and PhD) at the Graduate Program in Ecology", "Block course, 2 week (45h) in 2024, 1 week (30h) in 2023"),
   
-  "Best practices and Open Science tools for Ecology", "University of São Paulo", "Aug", 2023, "Aug", 2023, "São Paulo, Brazil", list("Lecturer and co-creator of the course for graduate students (master's and PhD) at the Graduate Program in Ecology.", "Block course, 1 week (30h)."),
+  "Introduction to R for Environmental Consultancy", "Arcadis Consultancy", "2016", "São Paulo, Brazil", list("Lecturer and creator of the course taught to the data science team at a large consultancy company in Brazil", "2 months (May-June): 4h per week"),
   
-  "Introduction to R for Environmental Consultancy", "Arcadis Consultancy", "May", 2016, "Jun", 2016, "São Paulo, Brazil", "Lecturer and creator of the course taught to the data science team at a large consultancy company in Brazil.",
+    "The Atlantic Forest field course", "University of São Paulo", "Jul 2025", "São Paulo, Brazil", "Guest lecturer/Project reviewer at the block course for graduate students (master's and PhD) at the Graduate Program for Ecology",
   
-    "The Atlantic Forest field course", "University of São Paulo", "Jul", 2015, "Jul", 2015, "São Paulo, Brazil", "Guest lecturer/Project reviewer at the block course for graduate students (master's and PhD) at the Graduate Program for Ecology",
+  "Field course on Invertebrate Zoology and Ecology", "Federal Institute of Education (IFRJ)", "2011 & 2012", "Rio de Janeiro, Brazil", "Guest Lecturer in two field courses for bachelor/undergraduate students",
   
-  "Field course on Invertebrate Zoology and Ecology", "Federal Institute of Education (IFRJ)", NA, 2011, NA, 2012, "Rio de Janeiro, Brazil", "Guest Lecturer in two field courses for bachelor/undergraduate students.",
+  "R Language for Ecological Data Analysis", "University of São Paulo", "2012 to 2018 & 2023", "São Paulo, Brazil", "Teaching assistant for 8 times in the block course, taught once per year at the Graduate Program for Ecology",
   
-  "R Language for Ecological Data Analysis", "University of São Paulo", NA, 2012,"2018 & 2023", NA, "São Paulo, Brazil", "Teaching assistant in the block course, taught once per year at the Graduate Program for Ecology ",
+  "Design, Planning and Data Analysis in Ecology", "University of São Paulo", "2018", "São Paulo, Brazil", "Block course, taught once per year at the Graduate Program for Ecology",
   
-  "Design, Planning and Data Analysis in Ecology", "University of São Paulo", NA, 2018, NA, 2018, "São Paulo, Brazil", "Block course, taught once per year at the Graduate Program for Ecology",
+  "Teaching assistant at bachelor courses in Biology", "University of São Paulo", "2015 - 2017 - 2024", "São Paulo, Brazil", list("Ecology of plant populations and communities (2017)", "Virtual Ecology (2015, 2017)", "Bioclimatology (2024)"),
   
-  "Teaching assistant at bachelor courses in Biology", "University of São Paulo", "2015 - 2017 - 2024",NA, NA, NA, "São Paulo, Brazil", list("Ecology of plant populations and communities (2017)", "Virtual Ecology (2015, 2017)", "Bioclimatology (2024)"),
-  
-  "Undergraduate teaching assistant at bachelor courses in Biology", "Federal University of Rio de Janeiro", NA, 2005, NA, 2006, "Rio de Janeiro, Brazil", list("Ecology, two semesters 2005, including fieldwork", "Animal Ecology, one semester 2006, including fieldwork", "Vertebrate Zoology, one semester 2006, including fieldwork"),
-
-   "Worshop on scientific graphics interpretation", "University of São Paulo", "Jul", 2024, "Jul", 2024, "São Paulo, Brazil",
-  list("Workshop dedicated to bachelor students applying for a master's/PhD at the Graduate Program in Ecology.", "Bachelor students that were covered by the Diversity and Inclusion affirmative action of the Program.", "3h")
-  )
-
-
+  "Undergraduate teaching assistant at bachelor courses in Biology", "Federal University of Rio de Janeiro", "2005 & 2006", "Rio de Janeiro, Brazil", list("Ecology, two semesters 2005, including fieldwork", "Animal Ecology, one semester 2006, including fieldwork", "Vertebrate Zoology, one semester 2006, including fieldwork"))
 ```
 
 ## Lecturer
@@ -139,8 +131,7 @@ teach %>% slice(1:5) %>%
     with = title,
     what = unit,
     why = detail,
-    where = glue::glue("{startMonth} {startYear} --> {endMonth} {endYear}",
-                       .na = ""),
+    where = year,
     when = where)
 ```
 
@@ -152,54 +143,92 @@ teach %>% slice(6:9)  %>%
     with = title,
     what = unit,
     why = detail,
-    where = glue::glue("{startMonth} {startYear} --> {endMonth} {endYear}",
-                       .na = ""),
+    where = year,
     when = where)
 ```
+
 
 ## Workshops
 
 ```{r}
-teach %>% slice(10)  %>%
+workshop <- tribble(
+  ~title, ~unit, ~year, ~where, ~detail,
+   "Worshop on scientific graphics interpretation", "University of São Paulo", "Jul 2024", "São Paulo, Brazil",
+  list("Workshop dedicated to bachelor students applying for a master's/PhD at the Graduate Program in Ecology", "Bachelor students that were covered by the Diversity, Equity, and Inclusion affirmative action of the Program", "3h")
+  )
+```
+
+```{r}
+workshop %>% 
   detailed_entries(
     with = title,
     what = unit,
     why = detail,
-    where = glue::glue("{startMonth} {startYear} --> {endMonth} {endYear}",
-                       .na = ""),
+    where = year,
     when = where)
 ```
 
 
+
 # Awards, fellowships and grants
 
-<!-- REVISAR VALORES DO GRANT DA PAULA LIRA
-     AVALIAR SEPARAR SEÇÃO PRIZES, AWARDS, FELLOWSHIPS DE GRANTS
-     -->
+<!-- REVISAR VALORES DO GRANT DA PAULA LIRA  -->
+
 The Brazilian reais (R$) amounts were converted to US dollars at the time of the award.
 
 ```{r}
 award <- tribble(
   ~title, ~unit, ~startMonth, ~startYear, ~endMonth, ~endYear, ~detail, ~value,
-  "Research Grant", "PPBIO-MMA, Brazil", "May", 2024, "April", 2027, "Researcher/collaborator at the 3‑years research funding. Title: Reconnecting people with nature: a path to conserving the Atlantic Forest
-. PI: Paula Koeler Lira (Pontifícia Universidade Católica, Rio de Janeiro).", "$300,000 BRL (~$57,000 USD)",
+  "Research Grant", "PPBIO-MMA, Brazil", "May", 2024, "April", 2027, "Researcher/collaborator at the 3‑years research funding. Title: Reconnecting people with nature: a path to conserving the Atlantic Forest. PI: Paula Koeler Lira (Pontifícia Universidade Católica, Rio de Janeiro).", "$300,000 BRL (~$57,000 USD)",
+  "Research Grant", "CAPES and Gratuate Program in Ecology, University of São Paulo", "Jan", 2022, "Mar", 2022, "Grant to develop part of the PhD project at Leiden University, The Netherlands.", "$10,000 BRL (˜$2,000 USD)",
+  "Research Travel Grant", "ForestGEO, Smithsonian Institution, USA", "Mar", 2020, "May", 2020, "Travel grant to develop the PhD project with the ForestGEO network at the University of Regensburg, Germany, for 2 months.","$2,500 USD",
+  "Research Grant", "FAPESP, Brazil", NA, 2017, NA, 2020, "Researcher collaborator at the 2-years research funding. Title: Functional and Phylogenetic assembly of trees in Restinga forest. PI: A.A. de Oliveira (University of São Paulo).","$60,000 USD",
+  "Research Grant", "FAPESP, Brazil", NA, 2014, NA, 2016, "Researcher collaborator at the 2-years research funding. Title: Ecological Detective tools, using imperfect detection models to investigate ecological questions. PI: P.I. Prado (University of São Paulo).","$60,000 USD",
+)
+```
+
+## Own grants
+
+```{r}
+award %>% slice(2,3)  %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    why = detail,
+    when = glue::glue("{startMonth} {startYear} --> {endMonth} {endYear}",.na = ""),
+    where= value)
+```
+
+## Grants as collaborator
+
+```{r}
+award %>% slice(1,4,5) %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    why = detail,
+    when = glue::glue("{startMonth} {startYear} --> {endMonth} {endYear}",.na = ""),
+    where= value)
+```
+
+## Awards & fellowships
+```{r}
+fellowship <- award <- tribble(
+  ~title, ~unit, ~startMonth, ~startYear, ~endMonth, ~endYear, ~detail, ~value,
   "Outstanding Thesis Prize 2023", "University of São Paulo","Dec", 2023, "Dec", 2023, "Prize awarded to the best PhD thesis defended at the University of São Paulo in 2022, in the category of staff scientist.", "$10,000 BRL (˜$2,000 USD)",
   "Research Fellowship", "PrInt-USP and CAPES, Brazil", "Jan", 2023, "Mar", 2023, "Two months fellowship from the Internationalization Program of the University of São Paulo and CAPES (Coordenação de Aperfeiçoamento de Pessoal de Nível Superior) to conduct research at Leiden University, The Netherlands.", "$5,030 EUR",
-  "Research Grant", "CAPES and Gratuate Program in Ecology, University of São Paulo", "Jan", 2022, "Mar", 2022, "Grant to develop part of the PhD project at Leiden University, The Netherlands.", "$10,000 BRL (˜$2,000 USD)",
   "Language Course Scholarship", "DAAD, Germany", "Jan", 2022, "Feb", 2022, "Scholarship from DAAD (Deutscher Akademischer Austauchdienst) to attend the Hochschulwinterkurs, an online German course (B2 level) at Leipzig University, Germany. It includes the course fee (€ 1185,00) and general expenses ($675 EUR).", "$1,860 EUR",
   "MBA Scholarship", "University of São Paulo, Brazil", "Oct", 2021, "Jul", 2023, "Scholarship to cover all course fees of the MBA in Data Science and Analytics at the University of São Paulo.", "$12,420 BRL (˜$2,600 USD)", # dolar em 2021 ~4,8
   "Predoctoral Fellowship", "Smithsonian Institution, USA", "Sep", 2020, "Feb", 2021, "6-months fellowship to work at the Laboratory of Quantitative Ecology, Smithsonian Environmental Research Center, Edgewaters (USA).", "$18,080 USD",
-  "Research Travel Grant", "ForestGEO, Smithsonian Institution, USA", "Mar", 2020, "May", 2020, "Travel grant to develop the PhD project with the ForestGEO network at the University of Regensburg, Germany, for 2 months.","$2,500 USD",
-  "Research Grant", "FAPESP, Brazil", NA, 2017, NA, 2020, "Researcher collaborator at the 2-years research funding. Title: Functional and Phylogenetic assembly of trees in Restinga forest. PI: A.A. de Oliveira (University of São Paulo).","$60,000 USD",
+  
   "MBA Scholarship", "University of São Paulo, Brazil", "Nov", 2015, "Aug", 2017, "Scholarship to cover all course fees of the MBA in Environmental Management at the University of São Paulo.", "$16,200 BRL (˜$4,700 USD)", # dolar em 2016 ~3,4
-  "Research Grant", "FAPESP, Brazil", NA, 2014, NA, 2016, "Researcher collaborator at the 2-years research funding. Title: Ecological Detective tools, using imperfect detection models to investigate ecological questions. PI: P.I. Prado (University of São Paulo).","$60,000 USD",
   "Master's Scholarship", "CNPq, Brazil", "Mar", 2007, "Mar", 2009, "2-years fellowship from Brazilian National Council for Scientific Development (CNPq) to work on my master's project.","$33,600 (˜$13,440 USD)", # dolar em 2008: ~2,5
-  "Undergraduate Scientific Scholarship", "CNPq, Brazil", "Mar", 2005, "Feb", 2007, "2-years fellowship from Brazilian National Council for Scientific Development (CNPq) to work on my bachelor's science project.","$9,600 BRL (˜$4,800 USD)", # dolar em 2007: ~2
+  "Undergraduate Science Scholarship", "CNPq, Brazil", "Mar", 2005, "Feb", 2007, "2-years fellowship from Brazilian National Council for Scientific Development (CNPq) to work on my bachelor's science project.","$9,600 BRL (˜$4,800 USD)", # dolar em 2007: ~2
 )
 ```
 
 ```{r}
-award %>%
+fellowship %>%
   detailed_entries(
     with = title,
     what = unit,
@@ -230,7 +259,7 @@ shortlist %>%
 
 15 peer-reviewed publications (6 as first author, 1 as senior author); 3 manuscripts in preparation (1 as first author); 6 Preprints; 5 repositories for datasets and code; 2 book chapters; 3 pieces of science outreach (2 reports for magazines, 1 for newspaper); 9 pieces of media coverage.
 
-**Google Scholar Citations (June 2024): 468; H-index 10; i10-index 10.**
+**Google Scholar Citations (January 2025): 511; H-index 11; i10-index 11.**
 
 *Citations for each paper are according to Google Scholar. Links to publications on titles.
 
@@ -241,35 +270,36 @@ bibliography_entries("references/peer_reviewed.bib") %>%
   arrange(desc(issued))
 ```
 
-1.  **Leite, M. de S.**, McMahon, S. M., Prado, P. I., Davies, S. J., Oliveira, A. A. de, ..., Visser, M.D & Hülsmann, L. (2024). [Major Axes of Variation in Tree Demography across Global Forests](https://doi.org/10.1111/ecog.07187). *Ecography*, e07187. **EDITOR'S CHOICE of the June Issue.**
+1.  **Leite, M. de S.**, McMahon, S. M., Prado, P. I., Davies, S. J., Oliveira, A. A. de, ..., Visser, M.D & Hülsmann, L. (2024). [Major Axes of Variation in Tree Demography across Global Forests](https://doi.org/10.1111/ecog.07187). *Ecography*, e07187. **EDITOR'S CHOICE of the June 2024 Issue.** Citation: 1.
 
-2.  Hülsmann, L., Chisholm, R. A., Comita, L., Visser, M. D., **Leite, M. de S.**, ... Hartig, F. (2024). [Latitudinal Patterns in Stabilizing Density Dependence of Forest Communities](https://doi.org/10.1038/s41586-024-07118-4). *Nature*, 1–8. Citations: 9.
+2.  Hülsmann, L., Chisholm, R. A., Comita, L., Visser, M. D., **Leite, M. de S.**, ... Hartig, F. (2024). [Latitudinal Patterns in Stabilizing Density Dependence of Forest Communities](https://doi.org/10.1038/s41586-024-07118-4). *Nature*, 1–8. Citations: 15.
 
-3.  **Leite, M. de S.**, Boesing, A. L., Metzger, J. P., & Prado, P. I. (2022). [Matrix Quality Determines the Strength of Habitat Loss Filter‐ ing on Bird Communities at the Landscape Scale](https://doi.org/10.1111/). *Journal of Applied Ecology*, 59(11), 2790–2802. Citations: 17. 
+3.  **Leite, M. de S.**, Boesing, A. L., Metzger, J. P., & Prado, P. I. (2022). [Matrix Quality Determines the Strength of Habitat Loss Filter‐ ing on Bird Communities at the Landscape Scale](https://doi.org/10.1111/). *Journal of Applied Ecology*, 59(11), 2790–2802. Citations: 21. 
 
-4.  Oberpriller, J., **Leite, M. de S.**, & Pichler, M. (2022). [Fixed or Random? On the Reliability of Mixed‐Effects Models for a Small Number of Levels in Grouping Variables](https://doi.org/10.1002/ece3.9062). *Ecology and Evolution*, 12(7), e9062. Citations: 41. **Prize for 2022-2023 Top cited and Top Downloaded Paper of Ecology & Evolution**
+4.  Oberpriller, J., **Leite, M. de S.**, & Pichler, M. (2022). [Fixed or Random? On the Reliability of Mixed‐Effects Models for a Small Number of Levels in Grouping Variables](https://doi.org/10.1002/ece3.9062). *Ecology and Evolution*, 12(7), e9062. Citations: 64. **Prize for 2022-2023 Top cited and Top Downloaded Paper of Ecology & Evolution**
 
 5.  Barros, C. dos S. de, Pistón, N., Delciellos, A. C., & **Leite, M. de S.** (2021). [Is Oecologia Australis Promoting Gender Equality in Its Review Process?](https://doi.org/10.4257/oeco.2021.2503.01) *Oecologia Australis*, 25(3), 642–647. Citations: 2.
 
-6.  Locosselli, G. M., Brienen, R. J. W., **Leite, M. de S.**, Gloor, M., Krottenthaler, S., Oliveira, A. A. de, Barichivich, J., Anhuf, D., Ceccantini, G., Schöngart, J., & Buckeridge, M. (2020). [Global Tree‐Ring Analysis Reveals Rapid Decrease in Tropical Tree Longevity with Temperature.](https://doi.org/10.1073/pnas.2003873117) *Proceedings of the National Academy of Sciences*, 117(52), 33358–33364. Citations: 72.
+6.  Locosselli, G. M., Brienen, R. J. W., **Leite, M. de S.**, Gloor, M., Krottenthaler, S., Oliveira, A. A. de, Barichivich, J., Anhuf, D., Ceccantini, G., Schöngart, J., & Buckeridge, M. (2020). [Global Tree‐Ring Analysis Reveals Rapid Decrease in Tropical Tree Longevity with Temperature.](https://doi.org/10.1073/pnas.2003873117) *Proceedings of the National Academy of Sciences*, 117(52), 33358–33364. Citations: 88.
 
-7.  **Leite, M. de S.**, Silva Junior, J. A. D., Calaboni, A., Igari, A. T., Leite, M. D. S., Silva Junior, J. A. D., Calaboni, A., & Igari, A. T. (2020). [Socioeconomic factors and natvie vegetation cover in rural landscapes in São Paulo state, Brazil](https://doi.org/10.1590/1809-4422asoc20170309r3vu2020l1ao). *Ambiente & Sociedade*, 23.  Citations: 7.
+7.  **Leite, M. de S.**, Silva Junior, J. A. D., Calaboni, A., Igari, A. T., Leite, M. D. S., Silva Junior, J. A. D., Calaboni, A., & Igari, A. T. (2020). [Socioeconomic factors and natvie vegetation cover in rural landscapes in São Paulo state, Brazil](https://doi.org/10.1590/1809-4422asoc20170309r3vu2020l1ao). *Ambiente & Sociedade*, 23.  Citations: 11.
 
-8.  Lira, P. K., **Leite, M. de S.**, & Metzger, J. P. (2019). [Temporal Lag in Ecological Responses to Landscape Change: Where Are We Now?](https://doi.org/10.1007/s40823-019-00040-w) *Current Landscape Ecology Reports*, 4(3), 70–82. Citations: 59.
+8.  Lira, P. K., **Leite, M. de S.**, & Metzger, J. P. (2019). [Temporal Lag in Ecological Responses to Landscape Change: Where Are We Now?](https://doi.org/10.1007/s40823-019-00040-w) *Current Landscape Ecology Reports*, 4(3), 70–82. Citations: 76.
 
-9.  Acosta, A. L., d’Albertas, F., **Leite, M. de S.**, Saraiva, A. M., & Walter Metzger, J. P. (2018). [Gaps and Limitations in the Use of Restoration Scenarios: A Review](https://doi.org/10.1111/rec.12882). R*estoration Ecology*, 26(6), 1108–1119. Citations: 24.
+9.  Acosta, A. L., d’Albertas, F., **Leite, M. de S.**, Saraiva, A. M., & Walter Metzger, J. P. (2018). [Gaps and Limitations in the Use of Restoration Scenarios: A Review](https://doi.org/10.1111/rec.12882). R*estoration Ecology*, 26(6), 1108–1119. Citations: 30.
 
 10. **Leite, M. de S.**, Galliez, M., Queiroz, T. L., & Fernandez, F. A. S. (2016). [Spatial Ecology of the Water Opossum Chironectes Minimus in Atlantic Forest Streams](https://doi.org/10.1016/j.mambio.2016.05). *Mammalian Biology*, 003. Citations: 9.
 
-11. Fernandez, F. A. S., Galliez, M., **Leite, M. de S.**, Queiroz, T. L., & Palmeirim, A. F. (2015). [Natural History of the Water Opossum Chironectes Minimus: A Review](https://doi.org/10.4257/oeco.2015.1901.04). *Oecologia Australis*, 19(1), 47–62. Citations: 17.
+11. Fernandez, F. A. S., Galliez, M., **Leite, M. de S.**, Queiroz, T. L., & Palmeirim, A. F. (2015). [Natural History of the Water Opossum Chironectes Minimus: A Review](https://doi.org/10.4257/oeco.2015.1901.04). *Oecologia Australis*, 19(1), 47–62. Citations: 16.
 
-12. Palmeirim, A. F., **Leite, M. de S.**, Santos‐Reis, M., & Fernandez, F. A. S. (2014). [Habitat Selection for Resting Sites by the Water Opossum (Chironectes Minimus) in the Brazilian Atlantic Forest](https://doi.org/10.1080/01650521.2014.966627). *Studies on Neotropical Fauna and Environment*, 49(3), 231–238. Citations: 10.
+12. Palmeirim, A. F., **Leite, M. de S.**, Santos‐Reis, M., & Fernandez, F. A. S. (2014). [Habitat Selection for Resting Sites by the Water Opossum (Chironectes Minimus) in the Brazilian Atlantic Forest](https://doi.org/10.1080/01650521.2014.966627). *Studies on Neotropical Fauna and Environment*, 49(3), 231–238. Citations: 9.
 
-13. **Leite, M. de S.**, Queir oz, T. L., Galliez, M., de Mendonça, P. P., & Fernandez, F. a. S. (2013). [Activity Patterns of the Water Opossum Chironectes Minimus in Atlantic Forest Rivers of South‐Eastern Brazil](https://doi.org/10.1017/S0266467413000187). *Journal of Tropical Ecology*, 29(03), 261–264. Citations: 16.
+13. **Leite, M. de S.**, Queir oz, T. L., Galliez, M., de Mendonça, P. P., & Fernandez, F. a. S. (2013). [Activity Patterns of the Water Opossum Chironectes Minimus in Atlantic Forest Rivers of South‐Eastern Brazil](https://doi.org/10.1017/S0266467413000187). *Journal of Tropical Ecology*, 29(03), 261–264. Citations: 15.
 
-14. **Leite, M. de S.**, Tambosi, L. R., Romitelli, I., & Metzger, J. P. (2013). [Landscape Ecology Perspective in Restoration Projects for Biodiversity Conservation : A Review](https://doi.org/10.4322/natcon.2013.019). *Perspectives in Ecology & Conservation (Natureza & Conservação)*, 11(2), 108–118. Citations: 90.
+14. **Leite, M. de S.**, Tambosi, L. R., Romitelli, I., & Metzger, J. P. (2013). [Landscape Ecology Perspective in Restoration Projects for Biodiversity Conservation : A Review](https://doi.org/10.4322/natcon.2013.019). *Perspectives in Ecology & Conservation (Natureza & Conservação)*, 11(2), 108–118. Citations: 93.
 
 15. Galliez, M., **Leite, M. de S.**, Queiroz, T. L., & Fernandez, F. A. S. (2009). [Ecology of the Water Opossum Chironectes Minimus in Atlantic Forest Streams of Southeastern Brazil](https://doi.org/10.1644/07-MAMM-A-397.1). *Journal of Mammalogy*, 90(1), 93–103. Citations: 58.
+
 
 ## Manuscripts in preparation
 
@@ -283,7 +313,8 @@ bibliography_entries("references/in_prep.bib")
 
 2.  **Leite, M. de S.**, De Deurwaerder, H., Hülsmann, L., & Visser, M. D. Are There Limits to the Predictability of Forest Dynamics? *To Be Submitted to Biogeosciences.*
 
-3.  Morato, K., **Leite, M. de S.**, ..., Metzger, J. P. Unpacking the Effects of Urban Green Areas Exposure on Mental Health: A Meta‐Analysis. *Submitted to Landscape and Urban Planning.*
+3.  Morato, K., **Leite, M. de S.**, ..., Metzger, J. P. Unpacking the Effects of Urban Green Areas Exposure on Mental Health: A Meta‐Analysis. *Submitted to Biosciences.*
+
 
 ## Preprints
 
@@ -293,11 +324,11 @@ bibliography_entries("references/preprints.bib") %>%
   arrange(desc(issued))
 ```
 
-1. Nakamura, G., Stabile, B. H., Frateles, L. F., Araujo, M. L., Neuhaus E., Marinho M., \***Leite, M. de S.**, Richter A., Liuyong, D., Freitas, T. M. S., Soares, B. E., Graça, W. J., Diniz-Filho, J. A. F. 2024 [The macroecology of knowledge: Spatio-temporal patterns of name-bearing types in biodiversity science](https://ecoevorxiv.org/repository/view/7539/). EcoEvoRxiv. *Submitted to Science*.
+1. Nakamura, G., Stabile, B. H., Frateles, L. F., Araujo, M. L., Neuhaus E., Marinho M., \***Leite, M. de S.**, Richter A., Liuyong, D., Freitas, T. M. S., Soares, B. E., Graça, W. J., Diniz-Filho, J. A. F. 2024 [The macroecology of knowledge: Spatio-temporal patterns of name-bearing types in biodiversity science](https://ecoevorxiv.org/repository/view/7539/). EcoEvoRxiv.
 
 2.  \*Barreto, J., Romitelli, I., Santana, P. C., Assis, A. P., Pardini, R., & \***Leite, M. de S.**. [Is the Audience Gender‐Blind? Smaller Audience in Female Talks Highlights Prestige Differences in Academia](https://doi.org/10.32942/X25607). EcoEvoRxiv. *Submitted for Recomendation to Peer Community In Ecology.* \*Authors with Equal Contribution.
 
-3. Noble, D. W. A., Xirocostas, Z. A., Wu, N. C., Martinig, A. R., Lagisz, M.,(...) Leite, MS,(...) et al. 2024. [The promise of community-driven preprints in ecology and evolution](https://ecoevorxiv.org/repository/view/7239/). EcoEvoRxiv. Submitted to Proc. Royal Soc. B.
+3. Noble, D. W. A., Xirocostas, Z. A., Wu, N. C., Martinig, A. R., Lagisz, M.,(...) Leite, MS,(...) et al. 2024. [The promise of community-driven preprints in ecology and evolution](https://ecoevorxiv.org/repository/view/7239/). EcoEvoRxiv. **Accepted in Proc. Royal Soc. B.** 
 
 Preprints published in peer-reviewed journals:
 
@@ -325,7 +356,7 @@ bibliography_entries("references/data_code_repo.bib") %>%
   arrange(desc(issued))
 ```
 
-1. **Leite, M. de S.** & Barreto, J. (2024). [Data and Code from: Is the audience gender-blind? Smaller audience in female talks highlights prestige differences in academia (v0.9.9)](https://doi.org/10.5281/zenodo.11288110). Zenodo.
+1. **Leite, M. de S.** & Barreto, J. (2024). [Data and Code from: Is the audience gender-blind? Smaller attendance in female talks highlights imbalanced visibility in academia (v1.0.0)](https://doi.org/10.5281/zenodo.11288110). Zenodo.
 
 2.  **Leite, M. de S.** (2022). [Data and Code from: Major Axes of Variation in Tree Demography across Global Forests](https:%20//doi.org/10.5281/zenodo.10046360). Zenodo.
 
@@ -333,7 +364,7 @@ bibliography_entries("references/data_code_repo.bib") %>%
 
 4.  Pichler, M., **Leite, M. de S.** & Oberpriller, J. (2022). [Data and Code from: Fixed or Random? On the Reliability of Mixed‐Effects Models for a Small Number of Levels in Grouping Variables](https://doi.org/10.5281/ZENODO.5817298). Zenodo.
 
-5. Locosselli, G., Brienen, R., **Leite, M. de Souza**, et al. (2020). [Locoselli_et_al_2020_Global tree-ring analysis reveals rapid decrease in tropical tree longevity with temperature_PNAS](https://doi.org/10.6084/m9.figshare.13119842.v1). figshare repository. 
+5. Locosselli, G., Brienen, R., **Leite, M. de Souza**, et al. (2020). [Global tree-ring analysis reveals rapid decrease in tropical tree longevity with temperature](https://doi.org/10.6084/m9.figshare.13119842.v1). figshare repository. 
 
 6.  **Leite, M. de S.** (2016). [Data from: Spatial Ecology of the Water Opossum Chironectes Minimus in Atlantic Forest Streams](https://doi.org/10.5441/001/1.4rr97k10). Movebank Repository.
 
