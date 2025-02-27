@@ -535,7 +535,7 @@ Referee of 1 funding project for the **Czech Science Foundation** (2024).
 ```{r, eval=F}
 review <- tribble(
     ~title, ~unit, ~year,
-    "Journal of Animal Ecology", "1 review", "2024",
+    "Journal of Animal Ecology", "2 reviews", "2024-2025",
     "Journal of Biogeography", "2 reviews", "2021-2022", 
     "Biota Neotropical", "1 review", "2020",
     "Oecologia Australis", "3 reviews", "2014,2019,2021",

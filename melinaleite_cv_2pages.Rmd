@@ -246,7 +246,7 @@ inv.talk %>% slice(1,2,3,5) %>%
 
 - **Assistant editor in statistics** at the journal Oecologia Australis (2020 - present)
 
-- **Reviewer** of 12 manuscripts for 7 peer-reviewed journals, including **Journal of Animal Ecology** (1; 2024),  **Journal of Biogeography** (2; 2021,2022); **Biota Neotropical** (1; 2020); **Oecologia Australis** (3; 2014,2019,2021); **Studies of Neotropical Fauna and Environment** (1; 2018); **Mammalia** (1; 2010); **Biotemas** (2; 2010).
+- **Reviewer** of 13 manuscripts for 7 peer-reviewed journals, including **Journal of Animal Ecology** (2; 2024,2025),  **Journal of Biogeography** (2; 2021,2022); **Biota Neotropical** (1; 2020); **Oecologia Australis** (3; 2014,2019,2021); **Studies of Neotropical Fauna and Environment** (1; 2018); **Mammalia** (1; 2010); **Biotemas** (2; 2010).
 
 - **Referee of funding project** for the Czech Science Foundation (2024).
 
