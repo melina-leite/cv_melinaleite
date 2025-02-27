@@ -376,15 +376,19 @@ bibliography_entries("references/data_code_repo.bib") %>%
 ```{r OUTREACH, eval=F}
 bibliography_entries("references/outreach.bib") %>%
   arrange(desc(issued))
+# essa biblio não inclui o video premio tese usp
 ```
 
-1.  Galliez, M., **Leite, M. de S.**, Fernandez, F. A. S., Queiroz, T. L., Palmeirim, A. F., Avelato, H. L., & Mendonça, P. P. (2011). Cuída d’água *Chironectes Minimus*. MG BIOTA,4(3), 56–60.2.
+1. **Leite, M. de S.** 2023. [Prêmio Teses USP 2023 - Incorporando a variabilidade: O uso de modelos de efeitos mistos em ecologia](https://www.youtube.com/watch?v=AWsvBHIzrOM) [Video recording]. Outreach video in Portuguese summarizing my thesis for the Outstanding Thesis Prize 2023. University of São Paulo, Brazil.
 
-2.  **Leite, M. de S.**, Galliez, M., Queiroz, T. L., & Fernandez, F. A. S. (2010). Cuíca D‘água. In Ficha Dos Seres Volume 3 ‑ Reserva Biológica União.
 
-3.  Fernandez, F. A. dos S., Galliez, M. & **Leite, M. de S.**. (2007). [O Gambá Que Inventou o Submarino](https://melinaleite.weebly.com/uploads/8/0/5/9/80595270/o_gamb%C3%A1_que_inventou_o_submarino_2007_fernandez_et_al.pdf). Ciência Hoje, 39(234): 70–72.
+2.  Galliez, M., **Leite, M. de S.**, Fernandez, F. A. S., Queiroz, T. L., Palmeirim, A. F., Avelato, H. L., & Mendonça, P. P. (2011). Cuída d’água *Chironectes Minimus*. MG BIOTA,4(3), 56–60.2.
 
-4.  Fernandez, FAS; Galliez M & **Leite, M. de S.**. 2007. [O gambá que inventou o submarino](https://melinaleite.weebly.com/uploads/8/0/5/9/80595270/chichi_reportagem_jornal_do_brasil.pdf). [Jornal do Brasil, JB Ciência Hoje (edição 0309)](https://memoria.bn.gov.br/DocReader/DocReader.aspx?bib=030015_12&pagfis=209524), p. A32, 11 Feb. 2007. 
+3.  **Leite, M. de S.**, Galliez, M., Queiroz, T. L., & Fernandez, F. A. S. (2010). Cuíca D‘água. In Ficha Dos Seres Volume 3 ‑ Reserva Biológica União.
+
+4.  Fernandez, F. A. dos S., Galliez, M. & **Leite, M. de S.**. (2007). [O Gambá Que Inventou o Submarino](https://melinaleite.weebly.com/uploads/8/0/5/9/80595270/o_gamb%C3%A1_que_inventou_o_submarino_2007_fernandez_et_al.pdf). Ciência Hoje, 39(234): 70–72.
+
+5.  Fernandez, FAS; Galliez M & **Leite, M. de S.**. 2007. [O gambá que inventou o submarino](https://melinaleite.weebly.com/uploads/8/0/5/9/80595270/chichi_reportagem_jornal_do_brasil.pdf). [Jornal do Brasil, JB Ciência Hoje (edição 0309)](https://memoria.bn.gov.br/DocReader/DocReader.aspx?bib=030015_12&pagfis=209524), p. A32, 11 Feb. 2007. 
 
 ## Media Coverage
 
