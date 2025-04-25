@@ -2,7 +2,7 @@
 name: Melina de Souza
 surname:  Leite
 position: "Ecologist and Data Scientist"
-profilepic: img/profile_pic.jpg
+#profilepic: img/profile_pic.jpg
 address: "Theoretical Ecology Lab, University of Regensburg, Germany"
 www: melinaleite.weebly.com
 pronouns: she/her
@@ -106,27 +106,21 @@ work %>%
 ```{r}
 teach <- tribble(
   ~title, ~unit, ~year, ~where, ~detail,
+  "Introduction to Statistics and Data Science with R", "University of Regensburg", "2025", "Regensburg, Germany", list("Lecturer of the coures for master's and PhD students", "Block course, 1 week (40h)"),
+  
     "Best practices and Open Science tools for Ecology", "University of São Paulo", "2023 & 2024", "São Paulo, Brazil", list("Lecturer and co-creator of the course for graduate students (master's and PhD) at the Graduate Program in Ecology", "Block course, 2 week (45h) in 2024, 1 week (30h) in 2023"),
   
   "Introduction to R for Environmental Consultancy", "Arcadis Consultancy", "2016", "São Paulo, Brazil", list("Lecturer and creator of the course taught to the data science team at a large consultancy company in Brazil", "2 months (May-June): 4h per week"),
   
-    "The Atlantic Forest field course", "University of São Paulo", "Jul 2025", "São Paulo, Brazil", "Guest lecturer/Project reviewer at the block course for graduate students (master's and PhD) at the Graduate Program for Ecology",
+    "The Atlantic Forest field course", "University of São Paulo", "Jul 2015", "São Paulo, Brazil", "Guest lecturer/Project reviewer at the block course for graduate students (master's and PhD) at the Graduate Program for Ecology",
   
-  "Field course on Invertebrate Zoology and Ecology", "Federal Institute of Education (IFRJ)", "2011 & 2012", "Rio de Janeiro, Brazil", "Guest Lecturer in two field courses for bachelor/undergraduate students",
-  
-  "R Language for Ecological Data Analysis", "University of São Paulo", "2012 to 2018 & 2023", "São Paulo, Brazil", "Teaching assistant for 8 times in the block course, taught once per year at the Graduate Program for Ecology",
-  
-  "Design, Planning and Data Analysis in Ecology", "University of São Paulo", "2018", "São Paulo, Brazil", "Block course, taught once per year at the Graduate Program for Ecology",
-  
-  "Teaching assistant at bachelor courses in Biology", "University of São Paulo", "2015 - 2017 - 2024", "São Paulo, Brazil", list("Ecology of plant populations and communities (2017)", "Virtual Ecology (2015, 2017)", "Bioclimatology (2024)"),
-  
-  "Undergraduate teaching assistant at bachelor courses in Biology", "Federal University of Rio de Janeiro", "2005 & 2006", "Rio de Janeiro, Brazil", list("Ecology, two semesters 2005, including fieldwork", "Animal Ecology, one semester 2006, including fieldwork", "Vertebrate Zoology, one semester 2006, including fieldwork"))
+  "Field course on Invertebrate Zoology and Ecology", "Federal Institute of Education (IFRJ)", "2011 & 2012", "Rio de Janeiro, Brazil", "Guest Lecturer in two field courses for bachelor/undergraduate students")
 ```
 
 ## Lecturer
 
 ```{r LECTURER}
-teach %>% slice(1:5) %>%
+teach %>% 
   detailed_entries(
     with = title,
     what = unit,
@@ -134,19 +128,6 @@ teach %>% slice(1:5) %>%
     where = year,
     when = where)
 ```
-
-## Teaching assistant
-
-```{r TEACHING ASSISTANT}
-teach %>% slice(6:9)  %>%
-  detailed_entries(
-    with = title,
-    what = unit,
-    why = detail,
-    where = year,
-    when = where)
-```
-
 
 ## Workshops
 
@@ -169,12 +150,38 @@ workshop %>%
 ```
 
 
+## Teaching assistant
+
+```{r}
+teach2 <- tribble(
+  ~title, ~unit, ~year, ~where, ~detail,
+    
+  "R Language for Ecological Data Analysis", "University of São Paulo", "2012 to 2018 & 2023", "São Paulo, Brazil", "Teaching assistant for 8 times in the block course, taught once per year at the Graduate Program for Ecology",
+  
+  "Design, Planning and Data Analysis in Ecology", "University of São Paulo", "2018", "São Paulo, Brazil", "Block course, taught once per year at the Graduate Program for Ecology",
+  
+  "Teaching assistant at bachelor courses in Biology", "University of São Paulo", "2015 - 2017 - 2024", "São Paulo, Brazil", list("Ecology of plant populations and communities (2017)", "Virtual Ecology (2015, 2017)", "Bioclimatology (2024)"),
+  
+  "Undergraduate teaching assistant at bachelor courses in Biology", "Federal University of Rio de Janeiro", "2005 & 2006", "Rio de Janeiro, Brazil", list("Ecology, two semesters 2005, including fieldwork", "Animal Ecology, one semester 2006, including fieldwork", "Vertebrate Zoology, one semester 2006, including fieldwork"))
+```
+
+```{r TEACHING ASSISTANT}
+teach2 %>% 
+  detailed_entries(
+    with = title,
+    what = unit,
+    why = detail,
+    where = year,
+    when = where)
+```
+
+
 
 # Awards, fellowships and grants
 
 <!-- REVISAR VALORES DO GRANT DA PAULA LIRA  -->
 
-The Brazilian reais (R$) amounts were converted to US dollars at the time of the award.
+Brazilian reais (R$) amounts were converted to US dollars at the time of the award.
 
 ```{r}
 award <- tribble(
@@ -211,18 +218,29 @@ award %>% slice(1,4,5) %>%
     where= value)
 ```
 
-## Awards & fellowships
+## Awards, Prizes & fellowships
 ```{r}
-fellowship <- award <- tribble(
+fellowship <- tribble(
   ~title, ~unit, ~startMonth, ~startYear, ~endMonth, ~endYear, ~detail, ~value,
+  "10th Cohort of the Mentoring.UR program", "University of Regensburg", "Dec", 2024, "Dec", 2025, "Selected to participate in the mentoring and coaching program for outstanding women academics at an early stage in their careers and in their personal development.", "$300 EUR + coaching workshops", 
+
+  #(https://www.uni-regensburg.de/chancengleichheit/mentoring/staffel-2024/index.html)
+  # mentors: David Bauman, Damaris Zurell
+
   "Outstanding Thesis Prize 2023", "University of São Paulo","Dec", 2023, "Dec", 2023, "Prize awarded to the best PhD thesis defended at the University of São Paulo in 2022, in the category of staff scientist.", "$10,000 BRL (˜$2,000 USD)",
+  
   "Research Fellowship", "PrInt-USP and CAPES, Brazil", "Jan", 2023, "Mar", 2023, "Two months fellowship from the Internationalization Program of the University of São Paulo and CAPES (Coordenação de Aperfeiçoamento de Pessoal de Nível Superior) to conduct research at Leiden University, The Netherlands.", "$5,030 EUR",
+  
   "Language Course Scholarship", "DAAD, Germany", "Jan", 2022, "Feb", 2022, "Scholarship from DAAD (Deutscher Akademischer Austauchdienst) to attend the Hochschulwinterkurs, an online German course (B2 level) at Leipzig University, Germany. It includes the course fee (€ 1185,00) and general expenses ($675 EUR).", "$1,860 EUR",
+  
   "MBA Scholarship", "University of São Paulo, Brazil", "Oct", 2021, "Jul", 2023, "Scholarship to cover all course fees of the MBA in Data Science and Analytics at the University of São Paulo.", "$12,420 BRL (˜$2,600 USD)", # dolar em 2021 ~4,8
+  
   "Predoctoral Fellowship", "Smithsonian Institution, USA", "Sep", 2020, "Feb", 2021, "6-months fellowship to work at the Laboratory of Quantitative Ecology, Smithsonian Environmental Research Center, Edgewaters (USA).", "$18,080 USD",
   
   "MBA Scholarship", "University of São Paulo, Brazil", "Nov", 2015, "Aug", 2017, "Scholarship to cover all course fees of the MBA in Environmental Management at the University of São Paulo.", "$16,200 BRL (˜$4,700 USD)", # dolar em 2016 ~3,4
+  
   "Master's Scholarship", "CNPq, Brazil", "Mar", 2007, "Mar", 2009, "2-years fellowship from Brazilian National Council for Scientific Development (CNPq) to work on my master's project.","$33,600 (˜$13,440 USD)", # dolar em 2008: ~2,5
+  
   "Undergraduate Science Scholarship", "CNPq, Brazil", "Mar", 2005, "Feb", 2007, "2-years fellowship from Brazilian National Council for Scientific Development (CNPq) to work on my bachelor's science project.","$9,600 BRL (˜$4,800 USD)", # dolar em 2007: ~2
 )
 ```
@@ -306,17 +324,22 @@ bibliography_entries("references/peer_reviewed.bib") %>%
 
 ## Manuscripts in preparation
 
+<!--- Ideia do Dynamic Ecology 23.03.2025L expand the status of the manuscript in prep
+- Draft manuscript, in reveiw with co-authors
+- results completed, manuscript partially drafted
+--->
+
 Manuscripts are available upon request.
 
 ```{r IN_PREP, eval=F}
 bibliography_entries("references/in_prep.bib") 
 ```
 
-1.  Barreto, J. R., **Leite, M. de S.**, Pardini, R., & Nichols, E. Context‐Dependent Drivers of Biodiversity Response to Anthropogenic Changes. *To Be Submitted to Ecology.*
+1.  Barreto, J. R., **Leite, M. de S.**, Pardini, R., & Nichols, E. Context‐Dependent Drivers of Biodiversity Response to Anthropogenic Changes. *To Be Submitted to Ecology.* Draft manuscript, in review with co-authors.
 
-2.  **Leite, M. de S.**, De Deurwaerder, H., Hülsmann, L., & Visser, M. D. Are There Limits to the Predictability of Forest Dynamics? *To Be Submitted to Biogeosciences.*
+2.  **Leite, M. de S.**, De Deurwaerder, H., Hülsmann, L., & Visser, M. D. Are There Limits to the Predictability of Forest Dynamics? *To Be Submitted to Biogeosciences.* Manuscript partially drafted.
 
-3.  Morato, K., **Leite, M. de S.**, ..., Metzger, J. P. Unpacking the Effects of Urban Green Areas Exposure on Mental Health: A Meta‐Analysis. *Submitted to Biosciences.*
+3.  Morato, K., **Leite, M. de S.**, ..., Metzger, J. P. Unpacking the Effects of Urban Green Areas Exposure on Mental Health: A Meta‐Analysis. *Submitted to Urban Ecosystems.*
 
 
 ## Preprints
@@ -471,7 +494,8 @@ sel.talk %>%
 ```{r}
 jury <- tribble(
   ~title, ~unit, ~year, ~where,
-  "1 PhD Defense", "Graduate Program of Ecology", 2023, "University of São Paulo, Brazil")
+  "1 PhD defense", "Graduate Program of Ecology", 2023, "University of São Paulo, Brazil", # Fernando Silvério
+  "1 PhD qualifiying examination", "Graduate Program of Ecology", 2025, "University of São Paulo, Brazil") # Carla Pavone
 
 jury %>%
   detailed_entries(
@@ -486,8 +510,9 @@ jury %>%
 ```{r}
 committee1 <- tribble(
   ~title, ~unit, ~year, ~where,
-  "1 MSc dissertation", "Graduate Program of Ecology", "2022 - 2024", "University of São Paulo, Brazil",
-  "2 MSc dissertations", "Graduate Program of Ecology", "2023 - 2025", "University of São Paulo, Brazil"
+  "1 MSc dissertation", "Graduate Program of Ecology", "2022 - 2024", "University of São Paulo, Brazil", # Jennifer Auler
+  "1 MSc dissertation", "Graduate Program of Ecology", "2023 - 2024", "University of São Paulo, Brazil", # Irina Leiner
+  "1 MSc dissertation", "Graduate Program of Ecology", "2023 - 2025", "University of São Paulo, Brazil" # Bianca Neves
 )
 
 committee1 %>%
