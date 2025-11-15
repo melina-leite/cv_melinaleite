@@ -117,7 +117,7 @@ teach <- tribble(
   "Field course on Invertebrate Zoology and Ecology", "Federal Institute of Education (IFRJ)", "2011 & 2012", "Rio de Janeiro, Brazil", "Guest Lecturer in two field courses for bachelor/undergraduate students")
 ```
 
-## Lecturer
+## Courses
 
 ```{r LECTURER}
 teach %>% 
@@ -134,7 +134,11 @@ teach %>%
 ```{r}
 workshop <- tribble(
   ~title, ~unit, ~year, ~where, ~detail,
-   "Worshop on scientific graphics interpretation", "University of São Paulo", "Jul 2024", "São Paulo, Brazil",
+  "2025 ForestGEO Analytical Workshop", "" ,"Jul 2025" , "Nanyuki, Kenya", "Co-mentor of eight projects from researchers at different levels (technician, master's, PhD and post-docs) in the Demography group 2." ,
+  
+  "Residual diagnostics of generalized linear (mixed-effects) models with DHARMa", "Justus Liebig University Giessen", "Aug 2025", "Giessen, Germany","Hands-on workshop on applying, interpreting and solving problems for residual diagnostics of GLM/GLMMs with the R package DHARMa",
+  
+   "Interpretation of scientific graphics", "University of São Paulo", "Jul 2024", "São Paulo, Brazil",
   list("Workshop dedicated to bachelor students applying for a master's/PhD at the Graduate Program in Ecology", "Bachelor students that were covered by the Diversity, Equity, and Inclusion affirmative action of the Program", "3h")
   )
 ```
@@ -143,7 +147,7 @@ workshop <- tribble(
 workshop %>% 
   detailed_entries(
     with = title,
-    what = unit,
+    what = unit, 
     why = detail,
     where = year,
     when = where)
@@ -275,9 +279,9 @@ shortlist %>%
 
 # Publications
 
-16 peer-reviewed publications (6 as first author, 1 as senior author); 3 manuscripts in preparation (1 as first author); 6 Preprints; 5 repositories for datasets and code; 2 book chapters; 3 pieces of science outreach (2 reports for magazines, 1 for newspaper); 9 pieces of media coverage.
+18 peer-reviewed publications (6 as first author, 2 as senior author); 2 manuscripts in preparation; 7 Preprints (from 6 published papers); 7 repositories for datasets and code; 2 book chapters; 3 pieces of science outreach (2 reports for magazines, 1 for newspaper); 9 pieces of media coverage.
 
-**Google Scholar Citations (January 2025): 511; H-index 11; i10-index 11.**
+**Google Scholar Citations (November 2025): 650; H-index 11; i10-index 11.**
 
 *Citations for each paper are according to Google Scholar. Links to publications on titles.
 
@@ -289,45 +293,46 @@ bibliography_entries("references/peer_reviewed.bib") %>%
   arrange(desc(issued))
 ```
 
-1. Noble, D. W. A., Xirocostas, Z. A., Wu, N. C., Martinig, ... **Leite, M. de S.**, ... Lagisz, M. (2025). [The promise of community-driven preprints in ecology and evolution](https://doi.org/10.1098/rspb.2024.1487). *Proceedings of the Royal Society B: Biological Sciences*, 292(2039), 20241487. 
+18.  Nakamura G, Stabile BHM, ...,**Leite, M. de S.**, et al. (2025) [The hidden biodiversity knowledge split in biological collections](https://royalsocietypublishing.org/doi/10.1098/rspb.2025.1045). *Proceedings of the Royal Society B: Biological Sciences* 292:20251045,  Citations: 2.
 
-2.  **Leite, M. de S.**, McMahon, S. M., Prado, P. I., Davies, S. J., Oliveira, A. A. de, ..., Visser, M.D & Hülsmann, L. (2024). [Major Axes of Variation in Tree Demography across Global Forests](https://doi.org/10.1111/ecog.07187). *Ecography*, e07187. **EDITOR'S CHOICE of the June 2024 Issue.** Citation: 1.
+17. Barreto JR, Romitelli I, Santana PC, Assis APA, Pardini R, **Leite M de S** (2025) [Is the audience gender-blind? Smaller attendance in female talks highlights an imbalanced visibility in academia.](https://www.nature.com/articles/s44185-025-00100-x) *npj Biodiversity* 4:28.  Citation: 3.
 
-3.  Hülsmann, L., Chisholm, R. A., Comita, L., Visser, M. D., **Leite, M. de S.**, ... Hartig, F. (2024). [Latitudinal Patterns in Stabilizing Density Dependence of Forest Communities](https://doi.org/10.1038/s41586-024-07118-4). *Nature*, 1–8. Citations: 15.
+16. Noble, D. W. A., Xirocostas, Z. A., Wu, N. C., Martinig, ... **Leite, M. de S.**, ... Lagisz, M. (2025). [The promise of community-driven preprints in ecology and evolution](https://doi.org/10.1098/rspb.2024.1487). *Proceedings of the Royal Society B: Biological Sciences*, 292(2039), 20241487.  Citation: 6.
 
-4.  **Leite, M. de S.**, Boesing, A. L., Metzger, J. P., & Prado, P. I. (2022). [Matrix Quality Determines the Strength of Habitat Loss Filter‐ ing on Bird Communities at the Landscape Scale](https://doi.org/10.1111/). *Journal of Applied Ecology*, 59(11), 2790–2802. Citations: 21. 
+15.  **Leite, M. de S.**, McMahon, S. M., Prado, P. I., Davies, S. J., Oliveira, A. A. de, ..., Visser, M.D & Hülsmann, L. (2024). [Major Axes of Variation in Tree Demography across Global Forests](https://doi.org/10.1111/ecog.07187). *Ecography*, e07187. **EDITOR'S CHOICE of the June 2024 Issue.** Citation: 3.
 
-5.  Oberpriller, J., **Leite, M. de S.**, & Pichler, M. (2022). [Fixed or Random? On the Reliability of Mixed‐Effects Models for a Small Number of Levels in Grouping Variables](https://doi.org/10.1002/ece3.9062). *Ecology and Evolution*, 12(7), e9062. Citations: 64. **Prize for 2022-2023 Top cited and Top Downloaded Paper of Ecology & Evolution**
+14.  Hülsmann, L., Chisholm, R. A., Comita, L., Visser, M. D., **Leite, M. de S.**, ... Hartig, F. (2024). [Latitudinal Patterns in Stabilizing Density Dependence of Forest Communities](https://doi.org/10.1038/s41586-024-07118-4). *Nature*, 1–8. Citations: 46.
 
-6.  Barros, C. dos S. de, Pistón, N., Delciellos, A. C., & **Leite, M. de S.** (2021). [Is Oecologia Australis Promoting Gender Equality in Its Review Process?](https://doi.org/10.4257/oeco.2021.2503.01) *Oecologia Australis*, 25(3), 642–647. Citations: 2.
+13.  **Leite, M. de S.**, Boesing, A. L., Metzger, J. P., & Prado, P. I. (2022). [Matrix Quality Determines the Strength of Habitat Loss Filter‐ ing on Bird Communities at the Landscape Scale](https://doi.org/10.1111/). *Journal of Applied Ecology*, 59(11), 2790–2802. Citations: 22. 
 
-7.  Locosselli, G. M., Brienen, R. J. W., **Leite, M. de S.**, Gloor, M., Krottenthaler, S., Oliveira, A. A. de, Barichivich, J., Anhuf, D., Ceccantini, G., Schöngart, J., & Buckeridge, M. (2020). [Global Tree‐Ring Analysis Reveals Rapid Decrease in Tropical Tree Longevity with Temperature.](https://doi.org/10.1073/pnas.2003873117) *Proceedings of the National Academy of Sciences*, 117(52), 33358–33364. Citations: 88.
+12.  Oberpriller, J., **Leite, M. de S.**, & Pichler, M. (2022). [Fixed or Random? On the Reliability of Mixed‐Effects Models for a Small Number of Levels in Grouping Variables](https://doi.org/10.1002/ece3.9062). *Ecology and Evolution*, 12(7), e9062. Citations: 79. **Prize for 2022-2023 Top cited and Top Downloaded Paper of Ecology & Evolution**
 
-8.  **Leite, M. de S.**, Silva Junior, J. A. D., Calaboni, A., Igari, A. T., Leite, M. D. S., Silva Junior, J. A. D., Calaboni, A., & Igari, A. T. (2020). [Socioeconomic factors and natvie vegetation cover in rural landscapes in São Paulo state, Brazil](https://doi.org/10.1590/1809-4422asoc20170309r3vu2020l1ao). *Ambiente & Sociedade*, 23.  Citations: 11.
+11.  Barros, C. dos S. de, Pistón, N., Delciellos, A. C., & **Leite, M. de S.** (2021). [Is Oecologia Australis Promoting Gender Equality in Its Review Process?](https://doi.org/10.4257/oeco.2021.2503.01) *Oecologia Australis*, 25(3), 642–647. Citations: 5.
 
-9.  Lira, P. K., **Leite, M. de S.**, & Metzger, J. P. (2019). [Temporal Lag in Ecological Responses to Landscape Change: Where Are We Now?](https://doi.org/10.1007/s40823-019-00040-w) *Current Landscape Ecology Reports*, 4(3), 70–82. Citations: 76.
+10.  Locosselli, G. M., Brienen, R. J. W., **Leite, M. de S.**, Gloor, M., Krottenthaler, S., Oliveira, A. A. de, Barichivich, J., Anhuf, D., Ceccantini, G., Schöngart, J., & Buckeridge, M. (2020). [Global Tree‐Ring Analysis Reveals Rapid Decrease in Tropical Tree Longevity with Temperature.](https://doi.org/10.1073/pnas.2003873117) *Proceedings of the National Academy of Sciences*, 117(52), 33358–33364. Citations: 124.
 
-10.  Acosta, A. L., d’Albertas, F., **Leite, M. de S.**, Saraiva, A. M., & Walter Metzger, J. P. (2018). [Gaps and Limitations in the Use of Restoration Scenarios: A Review](https://doi.org/10.1111/rec.12882). R*estoration Ecology*, 26(6), 1108–1119. Citations: 30.
+9.  **Leite, M. de S.**, Silva Junior, J. A. D., Calaboni, A., Igari, A. T., Leite, M. D. S., Silva Junior, J. A. D., Calaboni, A., & Igari, A. T. (2020). [Socioeconomic factors and natvie vegetation cover in rural landscapes in São Paulo state, Brazil](https://doi.org/10.1590/1809-4422asoc20170309r3vu2020l1ao). *Ambiente & Sociedade*, 23.  Citations: 18.
 
-11. **Leite, M. de S.**, Galliez, M., Queiroz, T. L., & Fernandez, F. A. S. (2016). [Spatial Ecology of the Water Opossum Chironectes Minimus in Atlantic Forest Streams](https://doi.org/10.1016/j.mambio.2016.05). *Mammalian Biology*, 003. Citations: 9.
+8.  Lira, P. K., **Leite, M. de S.**, & Metzger, J. P. (2019). [Temporal Lag in Ecological Responses to Landscape Change: Where Are We Now?](https://doi.org/10.1007/s40823-019-00040-w) *Current Landscape Ecology Reports*, 4(3), 70–82. Citations: 96.
 
-12. Fernandez, F. A. S., Galliez, M., **Leite, M. de S.**, Queiroz, T. L., & Palmeirim, A. F. (2015). [Natural History of the Water Opossum Chironectes Minimus: A Review](https://doi.org/10.4257/oeco.2015.1901.04). *Oecologia Australis*, 19(1), 47–62. Citations: 16.
+7.  Acosta, A. L., d’Albertas, F., **Leite, M. de S.**, Saraiva, A. M., & Walter Metzger, J. P. (2018). [Gaps and Limitations in the Use of Restoration Scenarios: A Review](https://doi.org/10.1111/rec.12882). R*estoration Ecology*, 26(6), 1108–1119. Citations: 34.
 
-13. Palmeirim, A. F., **Leite, M. de S.**, Santos‐Reis, M., & Fernandez, F. A. S. (2014). [Habitat Selection for Resting Sites by the Water Opossum (Chironectes Minimus) in the Brazilian Atlantic Forest](https://doi.org/10.1080/01650521.2014.966627). *Studies on Neotropical Fauna and Environment*, 49(3), 231–238. Citations: 9.
+6. **Leite, M. de S.**, Galliez, M., Queiroz, T. L., & Fernandez, F. A. S. (2016). [Spatial Ecology of the Water Opossum Chironectes Minimus in Atlantic Forest Streams](https://doi.org/10.1016/j.mambio.2016.05). *Mammalian Biology*, 003. Citations: 9.
 
-14. **Leite, M. de S.**, Queir oz, T. L., Galliez, M., de Mendonça, P. P., & Fernandez, F. a. S. (2013). [Activity Patterns of the Water Opossum Chironectes Minimus in Atlantic Forest Rivers of South‐Eastern Brazil](https://doi.org/10.1017/S0266467413000187). *Journal of Tropical Ecology*, 29(03), 261–264. Citations: 15.
+5. Fernandez, F. A. S., Galliez, M., **Leite, M. de S.**, Queiroz, T. L., & Palmeirim, A. F. (2015). [Natural History of the Water Opossum Chironectes Minimus: A Review](https://doi.org/10.4257/oeco.2015.1901.04). *Oecologia Australis*, 19(1), 47–62. Citations: 16.
 
-15. **Leite, M. de S.**, Tambosi, L. R., Romitelli, I., & Metzger, J. P. (2013). [Landscape Ecology Perspective in Restoration Projects for Biodiversity Conservation : A Review](https://doi.org/10.4322/natcon.2013.019). *Perspectives in Ecology & Conservation (Natureza & Conservação)*, 11(2), 108–118. Citations: 93.
+4. Palmeirim, A. F., **Leite, M. de S.**, Santos‐Reis, M., & Fernandez, F. A. S. (2014). [Habitat Selection for Resting Sites by the Water Opossum (Chironectes Minimus) in the Brazilian Atlantic Forest](https://doi.org/10.1080/01650521.2014.966627). *Studies on Neotropical Fauna and Environment*, 49(3), 231–238. Citations: 8.
 
-16. Galliez, M., **Leite, M. de S.**, Queiroz, T. L., & Fernandez, F. A. S. (2009). [Ecology of the Water Opossum Chironectes Minimus in Atlantic Forest Streams of Southeastern Brazil](https://doi.org/10.1644/07-MAMM-A-397.1). *Journal of Mammalogy*, 90(1), 93–103. Citations: 58.
+3. **Leite, M. de S.**, Queir oz, T. L., Galliez, M., de Mendonça, P. P., & Fernandez, F. a. S. (2013). [Activity Patterns of the Water Opossum Chironectes Minimus in Atlantic Forest Rivers of South‐Eastern Brazil](https://doi.org/10.1017/S0266467413000187). *Journal of Tropical Ecology*, 29(03), 261–264. Citations: 15.
+
+2. **Leite, M. de S.**, Tambosi, L. R., Romitelli, I., & Metzger, J. P. (2013). [Landscape Ecology Perspective in Restoration Projects for Biodiversity Conservation : A Review](https://doi.org/10.4322/natcon.2013.019). *Perspectives in Ecology & Conservation (Natureza & Conservação)*, 11(2), 108–118. Citations: 106.
+
+1. Galliez, M., **Leite, M. de S.**, Queiroz, T. L., & Fernandez, F. A. S. (2009). [Ecology of the Water Opossum Chironectes Minimus in Atlantic Forest Streams of Southeastern Brazil](https://doi.org/10.1644/07-MAMM-A-397.1). *Journal of Mammalogy*, 90(1), 93–103. Citations: 56.
+
 
 
 ## Manuscripts in preparation
 
-<!--- Ideia do Dynamic Ecology 23.03.2025L expand the status of the manuscript in prep
-- Draft manuscript, in reveiw with co-authors
-- results completed, manuscript partially drafted
---->
 
 Manuscripts are available upon request.
 
@@ -337,9 +342,7 @@ bibliography_entries("references/in_prep.bib")
 
 1.  Barreto, J. R., **Leite, M. de S.**, Pardini, R., & Nichols, E. Context‐Dependent Drivers of Biodiversity Response to Anthropogenic Changes. *To Be Submitted to Ecology.* Draft manuscript, in review with co-authors.
 
-2.  **Leite, M. de S.**, De Deurwaerder, H., Hülsmann, L., & Visser, M. D. Are There Limits to the Predictability of Forest Dynamics? *To Be Submitted to Biogeosciences.* Manuscript partially drafted.
-
-3.  Morato, K., **Leite, M. de S.**, ..., Metzger, J. P. Unpacking the Effects of Urban Green Areas Exposure on Mental Health: A Meta‐Analysis. *Submitted to Urban Ecosystems.*
+2.  Morato, K., **Leite, M. de S.**, ..., Metzger, J. P. Unpacking the Effects of Urban Green Areas Exposure on Mental Health: A Meta‐Analysis. *Submitted to Urban Ecosystems.*
 
 
 ## Preprints
@@ -350,19 +353,22 @@ bibliography_entries("references/preprints.bib") %>%
   arrange(desc(issued))
 ```
 
-1. Nakamura, G., Stabile, B. H., Frateles, L. F., Araujo, M. L., Neuhaus E., Marinho M., \***Leite, M. de S.**, Richter A., Liuyong, D., Freitas, T. M. S., Soares, B. E., Graça, W. J., Diniz-Filho, J. A. F. 2024 [The macroecology of knowledge: Spatio-temporal patterns of name-bearing types in biodiversity science](https://ecoevorxiv.org/repository/view/7539/). EcoEvoRxiv.
+7. **Leite M de S**, Rettelbach D, Hartig F (2025) [Dispersion tests in generalised linear mixed-effects models - a methods comparison and practical guide.](https://doi.org/10.32942/X23M14) EcoevoRxiv. Submitted to Methods in Ecology and Evolution.
 
-2.  \*Barreto, J., Romitelli, I., Santana, P. C., Assis, A. P., Pardini, R., & \***Leite, M. de S.**. [Is the Audience Gender‐Blind? Smaller Audience in Female Talks Highlights Prestige Differences in Academia](https://doi.org/10.32942/X25607). EcoEvoRxiv. *Submitted for Recomendation to Peer Community In Ecology.* \*Authors with Equal Contribution.
 
 Preprints published in peer-reviewed journals:
 
-3. Noble, D. W. A., Xirocostas, Z. A., Wu, N. C., Martinig, A. R., Lagisz, M.,... **Leite, M de S.**, ... et al. 2024. [The promise of community-driven preprints in ecology and evolution](https://ecoevorxiv.org/repository/view/7239/). EcoEvoRxiv.
+6. Nakamura, G., Stabile, B. H., Frateles, L. F., Araujo, M. L., Neuhaus E., Marinho M., \***Leite, M. de S.**, Richter A., Liuyong, D., Freitas, T. M. S., Soares, B. E., Graça, W. J., Diniz-Filho, J. A. F. 2024 [The macroecology of knowledge: Spatio-temporal patterns of name-bearing types in biodiversity science](https://ecoevorxiv.org/repository/view/7539/). EcoEvoRxiv.
 
-4.  **Leite, M. de S.**, McMahon, S. M., Prado, P. I., Davies, S. J., Oliveira, A. A. de, ..., Visser, M.D. & Hulsmann, L. (2023). [Major Axes of Variation in Tree Demography across Global Forests](https:%20//doi.org/10.1101/2023.01.11.523538). bioRxiv.
+5.  \*Barreto, J., Romitelli, I., Santana, P. C., Assis, A. P., Pardini, R., & \***Leite, M. de S.**. [Is the Audience Gender‐Blind? Smaller Audience in Female Talks Highlights Prestige Differences in Academia](https://doi.org/10.32942/X25607). EcoEvoRxiv. \*Authors with Equal Contribution.
 
-5.  **Leite, M. de S.**, Boesing, A. L., Metzger, J. P., & Prado, P. I. (2021). [Matrix Quality Determines the Strength of Habitat Loss Filtering on Bird Communities at the Landscape Scale](https://doi.org/10.32942/osf.io/bhec5). EcoEvoRxiv.
+4. Noble, D. W. A., Xirocostas, Z. A., Wu, N. C., Martinig, A. R., Lagisz, M.,... **Leite, M de S.**, ... et al. 2024. [The promise of community-driven preprints in ecology and evolution](https://ecoevorxiv.org/repository/view/7239/). EcoEvoRxiv.
 
-6.  Oberpriller, J., **Leite, M. de S.**, & Pichler, M. (2021). [Fixed or Random? On the Reliability of Mixed‐Effects Models for a Small Number of Levels in Grouping Variables](https://doi.org/10.1101/2021.05.03.442487). bioRxiv.
+3.  **Leite, M. de S.**, McMahon, S. M., Prado, P. I., Davies, S. J., Oliveira, A. A. de, ..., Visser, M.D. & Hulsmann, L. (2023). [Major Axes of Variation in Tree Demography across Global Forests](https:%20//doi.org/10.1101/2023.01.11.523538). bioRxiv.
+
+2.  **Leite, M. de S.**, Boesing, A. L., Metzger, J. P., & Prado, P. I. (2021). [Matrix Quality Determines the Strength of Habitat Loss Filtering on Bird Communities at the Landscape Scale](https://doi.org/10.32942/osf.io/bhec5). EcoEvoRxiv.
+
+1.  Oberpriller, J., **Leite, M. de S.**, & Pichler, M. (2021). [Fixed or Random? On the Reliability of Mixed‐Effects Models for a Small Number of Levels in Grouping Variables](https://doi.org/10.1101/2021.05.03.442487). bioRxiv.
 
 ## Book chapters
 
@@ -382,17 +388,19 @@ bibliography_entries("references/data_code_repo.bib") %>%
   arrange(desc(issued))
 ```
 
-1. **Leite, M. de S.** & Barreto, J. (2024). [Data and Code from: Is the audience gender-blind? Smaller attendance in female talks highlights imbalanced visibility in academia (v1.0.0)](https://doi.org/10.5281/zenodo.11288110). Zenodo.
+7. **Leite M de S** (2025) [Code and simulations from: Dispersion tests in generalised linear mixed-effects models - a methods comparison and practical guide](https://doi.org/10.5281/zenodo.17611061). Zenodo.
 
-2.  **Leite, M. de S.** (2022). [Data and Code from: Major Axes of Variation in Tree Demography across Global Forests](https:%20//doi.org/10.5281/zenodo.10046360). Zenodo.
+6. **Leite, M. de S.** & Barreto, J. (2024). [Data and Code from: Is the audience gender-blind? Smaller attendance in female talks highlights imbalanced visibility in academia (v1.0.0)](https://doi.org/10.5281/zenodo.11288110). Zenodo.
 
-3.  **Leite, M. de S.** (2022). [Data and Code from: Matrix Quality Determines the Strength of Habitat Loss Filtering on Bird Communities at the Landscape Scale (v2.2)](https://doi.org/10.5281/zenodo.6989648). Zenodo.
+5.  **Leite, M. de S.** (2022). [Data and Code from: Major Axes of Variation in Tree Demography across Global Forests](https:%20//doi.org/10.5281/zenodo.10046360). Zenodo.
 
-4.  Pichler, M., **Leite, M. de S.** & Oberpriller, J. (2022). [Data and Code from: Fixed or Random? On the Reliability of Mixed‐Effects Models for a Small Number of Levels in Grouping Variables](https://doi.org/10.5281/ZENODO.5817298). Zenodo.
+4.  **Leite, M. de S.** (2022). [Data and Code from: Matrix Quality Determines the Strength of Habitat Loss Filtering on Bird Communities at the Landscape Scale (v2.2)](https://doi.org/10.5281/zenodo.6989648). Zenodo.
 
-5. Locosselli, G., Brienen, R., **Leite, M. de Souza**, et al. (2020). [Global tree-ring analysis reveals rapid decrease in tropical tree longevity with temperature](https://doi.org/10.6084/m9.figshare.13119842.v1). figshare repository. 
+3.  Pichler, M., **Leite, M. de S.** & Oberpriller, J. (2022). [Data and Code from: Fixed or Random? On the Reliability of Mixed‐Effects Models for a Small Number of Levels in Grouping Variables](https://doi.org/10.5281/ZENODO.5817298). Zenodo.
 
-6.  **Leite, M. de S.** (2016). [Data from: Spatial Ecology of the Water Opossum Chironectes Minimus in Atlantic Forest Streams](https://doi.org/10.5441/001/1.4rr97k10). Movebank Repository.
+2. Locosselli, G., Brienen, R., **Leite, M. de Souza**, et al. (2020). [Global tree-ring analysis reveals rapid decrease in tropical tree longevity with temperature](https://doi.org/10.6084/m9.figshare.13119842.v1). figshare repository. 
+
+1.  **Leite, M. de S.** (2016). [Data from: Spatial Ecology of the Water Opossum Chironectes Minimus in Atlantic Forest Streams](https://doi.org/10.5441/001/1.4rr97k10). Movebank Repository.
 
 ## Science outreach
 
@@ -443,7 +451,9 @@ bibliography_entries("references/media_cov.bib") %>%
 ```{r}
 inv.talk <- tribble(
   ~title, ~unit, ~year, ~where,
-  "Diagnostic of linear models", "Lecture at the course on Ecological Modeling and Statistics", 2024, "university of São Paulo, Brazil",
+  "Major axes of variation in tree demography across global forests", "Seminar talk", 2025 ,"AMAP Lab, Montpellier, France",
+  
+  "Diagnostic of linear models", "Lecture at the course on Ecological Modeling and Statistics", 2024, "University of São Paulo, Brazil",
   "Open Data: what is it and what's in it for me?", "Lecture at the course on Data Management in Environmental Quality", 2024, "Federal University of Fronteira Sul, Brazil",
   "On the Demography of Threatened Trees", "Plant Ecology seminar at BayCEER", 2023, "University of Bayreuth, Germany",
   "Open Data in Ecology", "Lecture at the Graduate course on Open Science", 2023, "University of Goiás, Brazil",
@@ -456,6 +466,7 @@ inv.talk <- tribble(
 
 sel.talk <- tribble(
   ~title, ~unit, ~year, ~where,
+  "Detecting dispersion problems in generalized linear mixed-effects models", "54th Annual Meeting of the Ecological Society of Germany, Austria and Switzerland (GfÖ)", 2025, "Wurzburg, Germany",
   "Organizing global forests: Disentangling the contributions of species, space, and time to tree demography", "INTECOL Conference", 2022, "Geneva, Switzerland",
   "The dominant role of taxonomy in global forests: Disentangling the major contributions to tree demography", "ForestGEO seminar", 2021, "Online",
   "Seeing the forest for the trees: Disentangling the contribution of species, space and time to the variability in tree vital rates", "Festival of Ecology conference", 2020, "Online",
@@ -488,6 +499,22 @@ sel.talk %>%
 ```
 
 # Other Professional Experiences
+
+## Student's supervision
+
+```{r}
+super <- tribble(
+  ~title, ~unit, ~year, ~where,
+  "1 Bachelor thesis", "Theoretical Ecology group", 2025, "University of Regensburg, Germany") # Oscar Trautner 
+
+super %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    when = where,
+    where= year)
+```
+
 
 ## Jury member
 
@@ -611,10 +638,11 @@ others %>%
 ```{r}
 affi <- tribble(
   ~title, ~unit, ~year,
-  "ABECO", "Brazilian Association for Ecological Science and Conservation", "2020-2024",
-  "SBPC", "Brazilian Society for the Advancement of Science","2020-2024",
+  "GfÖ", "Ecological Society of Germany, Austria and Switzerland", "2025",
+  "ABECO", "Brazilian Association for Ecological Science and Conservation", "2020-2025",
+  "SBPC", "Brazilian Society for the Advancement of Science","2020-2025",
   "BES", "British Ecological Society","2020-2022",
-  "SORTEE", "Society for Open, Reliable, and Transparent Ecology and Evolutionary Biology","2021-2024")
+  "SORTEE", "Society for Open, Reliable, and Transparent Ecology and Evolutionary Biology","2021-2025")
 
 affi %>%
   detailed_entries(
