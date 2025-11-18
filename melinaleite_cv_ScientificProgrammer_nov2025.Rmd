@@ -117,6 +117,7 @@ teach <- tribble(
   "Field course on Invertebrate Zoology and Ecology", "Federal Institute of Education (IFRJ)", "2011 & 2012", "Rio de Janeiro, Brazil", "Guest Lecturer in two field courses for bachelor students in biology")
 ```
 
+
 ## Courses
 
 ```{r LECTURER}
@@ -184,7 +185,7 @@ teach2 %>%
 
 <!-- REVISAR VALORES DO GRANT DA PAULA LIRA  -->
 
-Amounts in Brazilian reais (R$) were converted to US dollars at the time of the award.
+Brazilian reais (R$) amounts were converted to US dollars at the time of the award.
 
 ```{r}
 award <- tribble(
@@ -258,27 +259,11 @@ fellowship %>%
     where= value)
 ```
 
-## Shortlisting
 
-```{r}
-shortlist <- tribble(
-  ~title, ~unit, ~year, ~detail,
-  "Southwood Prize 2022: Early Career Researcher Award", "Journal of Applied Ecology", "2023", "Shortlisted among the 12 best papers in Journal of Applied Ecology in 2022 with the paper: Matrix quality determines the strength of habitat loss filtering on bird communities at the landscape scale. "
-)
-#https://appliedecologistsblog.com/2023/03/20/southwood-prize-2022-shortlist-announced-for-early-career-researcher-award/
-```
-
-```{r}
-shortlist %>%
-  detailed_entries(with = title, 
-                   what = unit,
-                   why = detail,
-                   where = year)
-```
 
 # Publications
 
-18 peer-reviewed publications (6 as first author, 2 as senior author); 2 submitted manuscripts; 7 Preprints (from 6 published papers); 7 repositories for datasets and code; 1 contribution to software development (R package); 2 book chapters; 3 pieces of science outreach (2 reports for magazines, 1 for newspaper); 9 pieces of media coverage.
+18 peer-reviewed publications (6 as first author, 2 as senior author); 2 submitted manuscripts (1 Preprints available); 7 repositories for datasets and code; 1 contribution to software development (R package); 2 book chapters; 3 pieces of science outreach (2 reports for magazines, 1 for newspaper); 9 pieces of media coverage.
 
 **Google Scholar Citations (November 2025): 654; H-index 11; i10-index 12.**
 
@@ -342,7 +327,6 @@ bibliography_entries("references/in_prep.bib")
 
 ## Preprints
 
-
 ```{r PREPRINT, eval=F}
 bibliography_entries("references/preprints.bib") %>%
   arrange(desc(issued))
@@ -350,20 +334,6 @@ bibliography_entries("references/preprints.bib") %>%
 
 1. **Leite M de S**, Rettelbach D, Hartig F (2025) [Dispersion tests in generalised linear mixed-effects models - a methods comparison and practical guide.](https://doi.org/10.32942/X23M14) EcoevoRxiv. _Submitted to Methods in Ecology and Evolution._
 
-
-Preprints published in peer-reviewed journals:
-
-1. Nakamura, G., Stabile, B. H., Frateles, L. F., Araujo, M. L., Neuhaus E., Marinho M., \***Leite, M. de S.**, Richter A., Liuyong, D., Freitas, T. M. S., Soares, B. E., Graça, W. J., Diniz-Filho, J. A. F.(2024) [The macroecology of knowledge: Spatio-temporal patterns of name-bearing types in biodiversity science](https://ecoevorxiv.org/repository/view/7539/). EcoEvoRxiv.
-
-1.  \*Barreto, J., Romitelli, I., Santana, P. C., Assis, A. P., Pardini, R., & \***Leite, M. de S.**. (2025) [Is the Audience Gender‐Blind? Smaller Audience in Female Talks Highlights Prestige Differences in Academia](https://doi.org/10.32942/X25607). EcoEvoRxiv. \*Authors with Equal Contribution.
-
-1. Noble, D. W. A., Xirocostas, Z. A., Wu, N. C., Martinig, A. R., Lagisz, M.,... **Leite, M de S.**, ... et al. (2024). [The promise of community-driven preprints in ecology and evolution](https://ecoevorxiv.org/repository/view/7239/). EcoEvoRxiv.
-
-1.  **Leite, M. de S.**, McMahon, S. M., Prado, P. I., Davies, S. J., Oliveira, A. A. de, ..., Visser, M.D. & Hulsmann, L. (2023). [Major Axes of Variation in Tree Demography across Global Forests](https:%20//doi.org/10.1101/2023.01.11.523538). bioRxiv.
-
-1.  **Leite, M. de S.**, Boesing, A. L., Metzger, J. P., & Prado, P. I. (2021). [Matrix Quality Determines the Strength of Habitat Loss Filtering on Bird Communities at the Landscape Scale](https://doi.org/10.32942/osf.io/bhec5). EcoEvoRxiv.
-
-1.  Oberpriller, J., **Leite, M. de S.**, & Pichler, M. (2021). [Fixed or Random? On the Reliability of Mixed‐Effects Models for a Small Number of Levels in Grouping Variables](https://doi.org/10.1101/2021.05.03.442487). bioRxiv.
 
 ## Book chapters
 
@@ -469,8 +439,8 @@ sel.talk <- tribble(
   "Detecting dispersion problems in generalized linear mixed-effects models", "54th Annual Meeting of the Ecological Society of Germany, Austria and Switzerland (GfÖ)", 2025, "Wurzburg, Germany",
   "Organizing global forests: Disentangling the contributions of species, space, and time to tree demography", "INTECOL Conference", 2022, "Geneva, Switzerland",
   "The dominant role of taxonomy in global forests: Disentangling the major contributions to tree demography", "ForestGEO seminar", 2021, "Online",
-  "Seeing the forest for the trees: Disentangling the contribution of species, space and time to the variability in tree vital rates", "Festival of Ecology conference", 2020, "Online",
-  "Matrix quality modulates habitat loss filtering across scales on bird assemblages in fragmented landscapes", "Laboratory of Theoretical Ecology", 2020, " University of Regensburg, Germany",
+  "Seeing the forest for the trees: Disentangling the contribution of species, space and time to the variability in tree vital rates", "Festival of Ecology conference - British Ecological Society", 2020, "Online",
+ # "Matrix quality modulates habitat loss filtering across scales on bird assemblages in fragmented landscapes", "Laboratory of Theoretical Ecology", 2020, " University of Regensburg, Germany",
   "Applications of Mixed-Effects models in Ecology", "Laboratory of Landscape Ecology and Conservation", 2017, "University of São Paulo, Brazil",
 )
 ## DESCOBRIR COMO COLOCAR LINK PARA VÍDEOS GRAVADOS NO YOUTUBE!! (LINKS NO ARQUIVO GDOCS)
@@ -713,8 +683,8 @@ schools <- tribble(
     
     
     "Workshop: How to plan and write a competitive research grant proposal", "University of Regensburg (6h)", "2024", "Regensburg, Germany", "",
-    "Workshop: Leadership Skills - What Does It Take to be a Young Leader?", "University of Regensburg (6h)", "2024", "Regensburg, Germany", "",
-    "Workshop: Ace your Mental Health in Science", "University of Regensburg (6h)", "2024", "Regensburg, Germany", "",
+   # "Workshop: Leadership Skills - What Does It Take to be a Young Leader?", "University of Regensburg (6h)", "2024", "Regensburg, Germany", "",
+   # "Workshop: Ace your Mental Health in Science", "University of Regensburg (6h)", "2024", "Regensburg, Germany", "",
     "IX Southern-Summer School on Mathematical Biology", "ICTP-SAIRF (40h)", "2020", "São Paulo, Brazil", "",
     "School on Community Ecology: from principle to patterns", "ICTP-SAIRF (40h)", "2020", "São Paulo, Brazil", "",
     "Smithsonian CTFS-ForestGEO Analytical Workshop", "Singapore National University (2 weeks, 104h)", "2019", "Singapore","Travel costs were covered by the Smithsonian Institution",
@@ -731,6 +701,8 @@ schools %>%
 
 ## Other courses (graduate level)
 
+Selected courses
+
 ```{r}
 courses <- tribble(
   ~title, ~unit, ~year, ~where,
@@ -744,14 +716,14 @@ courses <- tribble(
   "Mixed-Effects Models and Applications", "Institute of Mathematics and Statistics, USP (120h)", "2016", "São Paulo, Brazil",
   "Multivariate Analysis for Environmental Science", "Institute of Biosciences, USP (40h)", "2016", "São Paulo, Brazil",
   "Introduction to Exploratory Analysis and Statistical Methods", "Institute of Biosciences, USP (40h)", "2016", "São Paulo, Brazil",
-  "Coaching and Leadership", "University of São Paulo (40h)", "2015", "São Paulo, Brazil",
+ # "Coaching and Leadership", "University of São Paulo (40h)", "2015", "São Paulo, Brazil",
   "Software Carpentry Workshop for Python, Git and Github", "University of São Paulo (16h)", "2015", "São Paulo, Brazil",
   "Academic Writing", "Institute of Biosciences, USP (40h)", "2014", "São Paulo, Brazil",
   "Bayesian Models in Ecology", "Institute of Biosciences, USP (40h)", "2014", "São Paulo, Brazil",
   "Statistical Models in Population Ecology", "Institute of Biosciences, USP (40h)", "2014", "São Paulo, Brazil",
   "Statistical Modeling for Ecology", "Institute of Biosciences, USP (40h)", "2014", "São Paulo, Brazil",
   "R Language for Ecological Data Analysis", "Institute of Biosciences, USP (40h)", "2011", "São Paulo, Brazil",
-  "English for Academic Writing", "Institute of Biosciences, USP (40h)", "2011", "São Paulo, Brazil",
+ # "English for Academic Writing", "Institute of Biosciences, USP (40h)", "2011", "São Paulo, Brazil",
   "GIS for Conservation Biology", "Institute for Ecological Research (IPE) (30h)", "2009", "São Paulo, Brazil",
   "Design and Analysis of Ecological Experiments", "Fluminense Federal University (40h)", "2008", "Rio de Janeiro, Brazil",
 )
